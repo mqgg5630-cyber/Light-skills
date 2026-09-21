@@ -103,6 +103,7 @@ if [ -n "$OWNER" ]; then
   ACCT_LINE="   account   : $OWNER  (the repo owner - this clone is pinned to it)"
 fi
 
+BS='\'
 cat <<EOF
 == paste this on YOUR machine (Windows PowerShell) - generated, do not retype
 
@@ -111,7 +112,7 @@ cat <<EOF
 if (-not (Test-Path -LiteralPath 'E:\0zhongqi')) { New-Item -ItemType Directory -Force -Path 'E:\0zhongqi' | Out-Null }
 dir E:\0zhongqi
 # pick a NEW folder name that does NOT exist yet (default below: $FOLDER)
-if (Test-Path -LiteralPath \"E:\\0zhongqi\\$FOLDER\") { Write-Host \"[ERROR] E:\\0zhongqi\\$FOLDER already exists - choose another name (e.g. ${FOLDER}-2)\" -ForegroundColor Red; return }
+if (Test-Path -LiteralPath 'E:\0zhongqi${BS}$FOLDER') { Write-Host '[ERROR] E:\0zhongqi${BS}$FOLDER already exists - choose another name (e.g. ${FOLDER}-2)' -ForegroundColor Red; return }
 cd E:\0zhongqi
 git clone -b $BRANCH $URL $FOLDER
 cd $FOLDER
