@@ -6,6 +6,18 @@ The project follows a pragmatic release-note style rather than claiming strict s
 
 ## [Unreleased]
 
+### Added
+
+- External bridge skills from `shaohuawen03-cyber/BrowserSkill` branch `arena/01a0b237-browserskill` (commit `db7ae89`): `skills/git-sync` v2.9.2 (sandbox <-> Windows two-way git bridge: `sync/push/upload/download/pack/doctor/bootstrap/pr/hardware/watch/auth/install/where`) and `skills/arena-local-bridge` v2.0 (optional, needs the local `bsk` CLI).
+- Repo-root `SKILLS.md` catalog plus `skills/gen_skills_index.sh`, whose `AUTO-INDEX` table is refreshed on every agent sync; the generator now reads YAML block-scalar descriptions and truncates by character so CJK text is not split.
+- `skills/.external-skills` manifest: skills shipped by other packs are mirrored as-is.
+- `code/check_all.sh` pre-commit gate, `code/local_check.ps1` (what the local watcher runs), and the gate helpers `code/scan_ps_var_colon.py`, `code/check_loop_summary.ps1`, `code/check_loop_summary.py`.
+- `docs/local-bridge/README.md`: Windows connection guide (paste-once install under `E:\0zhongqi`, never overwriting an existing directory), daily commands, acceptance checks, self-loop protocol, and uninstall.
+
+### Changed
+
+- `scripts/bootstrap_agent_skills.py` treats skills listed in `skills/.external-skills` as `external`: upstream frontmatter is kept, naming rules become advisory notes, and the mirrors no longer fail the run. The selftest covers both the external and the unlisted-invalid paths.
+
 ### Planned
 
 - Continue hardening cross-client compatibility for Codex, Claude Code, and OpenCode.

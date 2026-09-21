@@ -36,6 +36,7 @@ TARGETS = {
 }
 NAME_RE = re.compile(r"^[a-z0-9][a-z0-9-]{0,62}[a-z0-9]$")
 GENERATED_MARKER = ".light_generated_link"
+EXTERNAL_MANIFEST = ".external-skills"
 
 
 @dataclass
@@ -45,6 +46,7 @@ class SkillMeta:
     description_len: int
     ok: bool
     issues: list[str]
+    external: bool = False
 
 
 @dataclass
@@ -94,13 +96,34 @@ def parse_frontmatter(skill_md: Path) -> tuple[dict[str, str], str]:
     return data, body
 
 
+def load_external(skills_dir: Path) -> set[str]:
+    """Directory names of skills that come from another (upstream) skill pack.
+
+    ``skills/.external-skills`` lists them, one directory name per line, ``#``
+    starts a comment. Those skills are mirrored into the discovery paths
+    exactly as upstream ships them: their ``SKILL.md`` may use a frontmatter
+    ``name`` that differs from the directory name, or have no frontmatter at
+    all, so Light's own naming rules must not reject them. Notes about why a
+    skill is external are still reported, they just do not fail the run.
+    """
+    manifest = skills_dir / EXTERNAL_MANIFEST
+    if not manifest.exists():
+        return set()
+    names: set[str] = set()
+    for raw in manifest.read_text(encoding="utf-8").splitlines():
+        line = raw.split("#", 1)[0].strip()
+        if line:
+            names.add(line)
+    return names
+
+
 def iter_skills(skills_dir: Path) -> Iterable[Path]:
     if not skills_dir.exists():
         return []
     return sorted(p for p in skills_dir.iterdir() if p.is_dir() and (p / "SKILL.md").exists())
 
 
-def validate_skill(skill_dir: Path) -> SkillMeta:
+def validate_skill(skill_dir: Path, external: bool = False) -> SkillMeta:
     fm, _ = parse_frontmatter(skill_dir / "SKILL.md")
     issues: list[str] = []
     name = fm.get("name", "")
@@ -121,8 +144,11 @@ def validate_skill(skill_dir: Path) -> SkillMeta:
         directory=skill_dir.name,
         name=name,
         description_len=len(description),
-        ok=not issues,
+        # an external skill keeps upstream's frontmatter, so Light's naming
+        # rules become advisory notes instead of hard failures
+        ok=external or not issues,
         issues=issues,
+        external=external,
     )
 
 
@@ -189,7 +215,8 @@ def bootstrap_one(
 def run(repo_root: Path, targets: list[str], mode: str, force: bool, check_only: bool) -> tuple[list[SkillMeta], list[TargetResult]]:
     skills_dir = repo_root / "skills"
     skills = list(iter_skills(skills_dir))
-    metas = [validate_skill(p) for p in skills]
+    external = load_external(skills_dir)
+    metas = [validate_skill(p, external=p.name in external) for p in skills]
     results: list[TargetResult] = []
     if check_only:
         for target in targets:
@@ -206,18 +233,23 @@ def run(repo_root: Path, targets: list[str], mode: str, force: bool, check_only:
             if not meta.ok:
                 results.append(TargetResult(target, skill.name, "invalid", str(root / skill.name), message="; ".join(meta.issues)))
                 continue
-            results.append(bootstrap_one(skill, root, target, mode, force, skills_dir))
+            result = bootstrap_one(skill, root, target, mode, force, skills_dir)
+            if meta.external and result.status == "created" and not result.message:
+                result.message = "external skill mirrored as-is (upstream frontmatter kept)"
+            results.append(result)
     return metas, results
 
 
 def run_selftest(repo_root: Path) -> int:
-    base = repo_root / ".upgrade" / "_e2e" / "bootstrap_agent_skills_selftest"
-    resolved = base.resolve()
     guard = (repo_root / ".upgrade" / "_e2e").resolve()
-    if guard not in resolved.parents and resolved != guard:
-        raise RuntimeError(f"unsafe selftest path: {resolved}")
-    if base.exists():
-        shutil.rmtree(base)
+    base = repo_root / ".upgrade" / "_e2e" / "bootstrap_agent_skills_selftest"
+    strict_base = repo_root / ".upgrade" / "_e2e" / "bootstrap_agent_skills_selftest_strict"
+    for path in (base, strict_base):
+        if guard not in path.resolve().parents:
+            raise RuntimeError(f"unsafe selftest path: {path}")
+        if path.exists():
+            shutil.rmtree(path)
+
     (base / "skills" / "light-demo").mkdir(parents=True)
     (base / "skills" / "light-second").mkdir(parents=True)
     for name in ["light-demo", "light-second"]:
@@ -225,17 +257,45 @@ def run_selftest(repo_root: Path) -> int:
             f"---\nname: {name}\ndescription: Test skill for bootstrap.\n---\n\n# {name}\n",
             encoding="utf-8",
         )
+    # an upstream skill pack: listed in skills/.external-skills, so its
+    # frontmatter-free SKILL.md is mirrored as-is instead of being rejected
+    (base / "skills" / "bridge-demo").mkdir(parents=True)
+    (base / "skills" / "bridge-demo" / "SKILL.md").write_text(
+        "# bridge-demo\n\nUpstream skill, no frontmatter on purpose.\n",
+        encoding="utf-8",
+    )
+    (base / "skills" / EXTERNAL_MANIFEST).write_text(
+        "# skills from other packs, mirrored as-is\nbridge-demo\n",
+        encoding="utf-8",
+    )
+
     metas, results = run(base, ["agents", "claude", "opencode"], "copy", False, False)
     assert all(m.ok for m in metas), metas
-    assert len(results) == 6, results
+    assert [m.directory for m in metas] == ["bridge-demo", "light-demo", "light-second"], metas
+    assert [m.external for m in metas] == [True, False, False], metas
+    assert metas[0].issues, "an external skill should still report why it is external"
+    assert len(results) == 9, results
     for target in TARGETS:
-        for name in ["light-demo", "light-second"]:
+        for name in ["bridge-demo", "light-demo", "light-second"]:
             p = base / TARGETS[target] / name / "SKILL.md"
             marker = base / TARGETS[target] / name / GENERATED_MARKER
             assert p.exists(), p
             assert marker.exists(), marker
     _, check = run(base, ["agents", "claude", "opencode"], "copy", False, True)
     assert all(r.status == "present" for r in check), check
+
+    # the same skill WITHOUT its manifest entry must still be rejected
+    (strict_base / "skills" / "bridge-demo").mkdir(parents=True)
+    shutil.copy(
+        base / "skills" / "bridge-demo" / "SKILL.md",
+        strict_base / "skills" / "bridge-demo" / "SKILL.md",
+    )
+    strict_metas, strict_results = run(strict_base, ["claude"], "copy", False, False)
+    assert strict_metas[0].ok is False and strict_metas[0].external is False, strict_metas
+    assert [r.status for r in strict_results] == ["invalid"], strict_results
+
+    shutil.rmtree(base)
+    shutil.rmtree(strict_base)
     print("[selftest] bootstrap_agent_skills ALL PASS")
     return 0
 
@@ -261,7 +321,14 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(payload, ensure_ascii=False, indent=2))
     else:
         bad = [m for m in metas if not m.ok]
-        print(f"[Light bootstrap] skills={len(metas)} invalid={len(bad)} check_only={args.check_only}")
+        ext = [m for m in metas if m.external]
+        print(
+            f"[Light bootstrap] skills={len(metas)} external={len(ext)} "
+            f"invalid={len(bad)} check_only={args.check_only}"
+        )
+        for m in ext:
+            note = "; ".join(m.issues) if m.issues else "upstream frontmatter accepted as-is"
+            print(f"  [EXTERNAL] {m.directory}: {note}")
         for m in bad:
             print(f"  [INVALID] {m.directory}: {'; '.join(m.issues)}")
         for r in results:

@@ -100,6 +100,17 @@ $env:PYTHONUTF8="1"
 python scripts\bootstrap_agent_skills.py --check-only
 ```
 
+### Windows 本机打通（可选）
+
+仓库里还装了一份外部桥技能 **git-sync v2.9.2**（来源
+[shaohuawen03-cyber/BrowserSkill](https://github.com/shaohuawen03-cyber/BrowserSkill)
+分支 `arena/01a0b237-browserskill`），用来把 Arena 沙箱里的 agent 和你自己的
+Windows 机器接起来：agent 推分支 → 本机值守自动拉取、跑检查、把判定与产物推回。
+它和 23 个 light-* 技能互不依赖，登记在 `skills/.external-skills` 里按外部技能镜像。
+
+一段粘贴即可在 `E:\0zhongqi\<新目录>` 建克隆并注册值守（**不覆盖已有目录**）：
+见 [`docs/local-bridge/README.md`](docs/local-bridge/README.md)。
+
 ## 环境要求
 
 ### 基础环境

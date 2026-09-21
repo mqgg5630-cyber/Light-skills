@@ -1,0 +1,14 @@
+# 外部技能清单（external skill packs）
+#
+# 这里列出的目录不是 Light Skills 自研技能，而是从别的技能包整份装进来的，
+# scripts/bootstrap_agent_skills.py 会把它们原样镜像到 .agents/.claude/.opencode，
+# 并按 external 处理：上游 SKILL.md 的 frontmatter（name 可与目录名不同、甚至没有）
+# 保持不变，命名规则只作为提示，不再判 invalid。
+#
+# 升级方式见 docs/local-bridge/README.md（重装即升级，配置与本地检查脚本只建不覆盖）。
+
+# 来源：https://github.com/shaohuawen03-cyber/BrowserSkill  分支 arena/01a0b237-browserskill
+# git-sync v2.9.2 —— 沙箱 ↔ 本机 Windows 的 git 双向桥（sync/push/watch/doctor/auth/where）
+git-sync
+# arena-local-bridge v2.0 —— arena 会话编排 + 实测铁律（依赖 git-sync 与本机 bsk，选装）
+arena-local-bridge
