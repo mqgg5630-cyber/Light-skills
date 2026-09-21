@@ -48,6 +48,11 @@ PY
 BRANCH="$(json_key branch)"
 REMOTE="$(json_key remote)"; [ -z "$REMOTE" ] && REMOTE="origin"
 
+# where this user's Windows clones live - config-driven (key: local_parent_dir);
+# falls back to the legacy default so other machines keep working unchanged.
+LOCAL_PARENT="$(json_key local_parent_dir)"
+[ -z "$LOCAL_PARENT" ] && LOCAL_PARENT='E:\0github\git-sync'
+
 # sed fallback: python may be missing or be the Windows Store stub
 if [ -z "$BRANCH" ]; then
   BRANCH="$(sed -n 's/.*"branch"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' "$CFG" 2>/dev/null | head -1)"
