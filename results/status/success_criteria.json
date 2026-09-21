@@ -1,0 +1,44 @@
+{
+  "description": "Round 1 = BrowserSkill bridge install verified ON THE LOCAL WINDOWS CLONE (E:/0zhongqi).",
+  "require_files": [
+    "watch.ps1",
+    "sync.ps1",
+    "push.ps1",
+    "doctor.ps1",
+    "auth.ps1",
+    "bootstrap.ps1",
+    "download.ps1",
+    "where.ps1",
+    "where.cmd",
+    "skills/git-sync/VERSION",
+    "skills/git-sync/SKILL.md",
+    "skills/git-sync/sync.config.json",
+    "skills/git-sync/scripts/watch.ps1",
+    "skills/arena-local-bridge/SKILL.md",
+    "skills/.external-skills",
+    "skills/gen_skills_index.sh",
+    "code/check_all.sh",
+    "code/local_check.ps1",
+    "code/scan_ps_var_colon.py",
+    "SKILLS.md",
+    "docs/local-bridge/README.md",
+    "scripts/bootstrap_agent_skills.py"
+  ],
+  "forbid_files": [
+    "01a0a821.md"
+  ],
+  "require_contains": {
+    "skills/git-sync/VERSION": "2.9.2",
+    "skills/git-sync/sync.config.json": "arena/01a0c342-light-skills",
+    "skills/.external-skills": "arena-local-bridge",
+    "docs/local-bridge/README.md": "E:\\0zhongqi",
+    "SKILLS.md": "BEGIN:AUTO-INDEX",
+    "scripts/bootstrap_agent_skills.py": "EXTERNAL_MANIFEST"
+  },
+  "min_bytes": {
+    "watch.ps1": 20000,
+    "skills/git-sync/SKILL.md": 5000,
+    "docs/local-bridge/README.md": 2000,
+    "SKILLS.md": 2000
+  }
+}

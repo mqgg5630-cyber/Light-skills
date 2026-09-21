@@ -1,0 +1,9 @@
+{
+  "round": 1,
+  "arena_state": "awaiting_check",
+  "local_state": "pending",
+  "arena_updated": "2026-09-21 09:45:29",
+  "local_updated": null,
+  "host": "",
+  "note": "round 1: verify the BrowserSkill bridge install on the local Windows clone under E:\\0zhongqi (gate + criteria + silent push + zero-window watcher)"
+}
