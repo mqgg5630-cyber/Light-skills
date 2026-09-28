@@ -13,6 +13,7 @@ Installed from GitHub into this folder (text only; large figure assets omitted) 
 | scientific-writing | [shaohuawen03-cyber/Auto-Empirical-Research-Skills](https://github.com/shaohuawen03-cyber/Auto-Empirical-Research-Skills) `04-K-Dense-AI-claude-scientific-writer` | Claim strength matched to computation-only evidence |
 | humanizer | [blader/humanizer](https://github.com/blader/humanizer) | Removed staged closers, question-ending intro, “not the whole story” contrast |
 | aigc-detector-rewriter | [Moonlit-Pages/AIGC-Detector-Rewriter-Skill](https://github.com/Moonlit-Pages/AIGC-Detector-Rewriter-Skill) | No back-translation. Expanded intro instead of compressing. Did **not** claim a detector score |
+| turnitout-humanizer | [AhmadHassan-BTed/Turnitout-Humanizer](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer) | Rule-based engine (no LLM). Applied its fact-lock: numbers, citations and tables unchanged. Did **not** run n-gram shattering on the manuscript (that would scramble SCI English). No detector score claimed |
 
 ## Apple Translate
 

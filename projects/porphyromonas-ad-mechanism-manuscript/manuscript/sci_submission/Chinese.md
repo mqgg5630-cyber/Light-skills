@@ -259,29 +259,41 @@ apo RMSD 平台约 0.19 nm（图5A–7A）。ALLLHRC 跟随对照（复合物 0.
 
 ## 讨论
 
+### 主要发现
+
+22 个 UniDL4BioPep 头按 ≥0.80 给健康标记库 11.27 百万条、牙周炎标记库 11.72 百万条口腔 smORF 打分。目录匹配、NTxPred2、mebipred 与 AnOxPePred 随后把牙周炎分支收到 12 条明示 7–9 aa 肽。12 条均对接到人源 AChE，最优 Vina 亲和力介于 −8.25 至 −9.60 kcal/mol（图2，表6）。FLLHTTR、YLSLLQR 与 LLHPLRL 接触 PAS。100 ns 内 apo AChE 以及 ALLLHRC、FLLHTTR、YLSLLQR 复合物保持球状；FLLHTTR 与 YLSLLQR 比 apo 更紧凑，FLLHTTR 分子间氢键网最密（表7，图5–7）。这些对象构成计算配体集合，落点是加速 Aβ 组装的同一 PAS[@inestrosa1996ache; @atanasova2020md]。它们并不证明转运、表达或疾病因果。
+
+### 两库如何不同
+
+健康库与牙周炎库在多数 UniDL4BioPep 头上接近（表1–3）。BBB（BBP）率只差 0.12 个百分点（9.72% 对 9.60%），BBB 高分不是牙周炎印记。牙周炎高于健康 ≥1 个百分点的只有群体感应（+1.39）。健康更高的有抗真菌（−2.50）、抗寄生虫（−2.36）、抗氧化 FRS（−1.95）、抗病毒（−1.89）、抗细菌（−1.42）、CPP（−1.24）、抗癌主（−1.22）和鲜味（−1.00）。抗菌几乎持平（87.89% 对 87.69%）。这些是全库打分率。没有逐条交集表，不能证明 12 条对接序列在健康库中不存在，也不能把牙周炎标签转给单条肽。表5 的理化描述符刻画对接配体，不是疾病对照。
+
+UniDL4BioPep、NTxPred2、mebipred 与 AnOxPePred 的串联一致是过滤栈。ESM 嵌入、组成特征和任务训练集可以共享相关误差[@du2023unidl4biopep; @rathore2025ntxpred2; @aptekmann2022mebipred; @olsen2020anoxpepred]。两库抗菌阳性近乎普遍，说明 ≥0.80 只用于排序，并不建立 BBB 转运、神经毒性、金属结合或氧化还原化学。微生物组抗菌肽挖掘所用的先预测再过滤顺序[@torres2024peptideantibiotics]在此保留为分诊。与 HOMD、eHOMD 及口腔宏蛋白质组的目录匹配支持该字符串曾经被观察到[@chen2010homd; @escapa2018ehomd; @belstrom2016metaproteomics; @jiang2022oralmetaproteomics; @yuan2025osample]，不能证明它在 PRJNA678453 样本中翻译[@belstrom2021periodontitis; @sberro2019smallgenes; @durrant2021sorf]。
+
 ### 口腔肽经 PAS 通向 AD 的可能路径
 
-AD 把淀粉样沉积与胆碱能衰竭并置[@selkoe2016amyloid; @hampel2018cholinergic]。水解之外，AChE 在 PAS 促进 Aβ 纤丝，AChE–Aβ 复合物毒性高于游离 Aβ[@inestrosa1996ache]。疏水 PAS 基序足以完成该伴侣工作[@deferrari2001motif]，PAS 导向配体可在生化测定中抑制 AChE 驱动的聚集[@bartolini2003pas]。加速 MD 把 Aβ 放到 AChE 表面作为成核中心[@lushchekina2017amd]；1 μs 轨迹使 Aβ 留在 PAS，主要在 344–361[@atanasova2020md]。牙周炎与 *P. gingivalis* 提供暴露路径[@dominy2019pgingivalis; @ilievski2018oral; @chalmers2025primer]。对接与 100 ns 运行表明牙周炎来源微肽可以占据同一 PAS。四步勾勒可能机制。
+AD 把淀粉样沉积与胆碱能衰竭并置[@selkoe2016amyloid; @hampel2018cholinergic]。不依赖催化，AChE 经 PAS 加速 Aβ 成纤，AChE–Aβ 复合物毒性高于单独 Aβ[@inestrosa1996ache]。一段疏水 PAS 基序即足以促进该伴侣活性[@deferrari2001motif]。PAS 导向配体在生化测定中抑制 AChE 诱导的聚集[@bartolini2003pas]。加速 MD 把 Aβ 放到 AChE 表面作为成核中心[@lushchekina2017amd]。1 μs 轨迹使 Aβ 留在 PAS，主驻留区为残基 344–361[@atanasova2020md]。牙周炎与 *P. gingivalis* 提供暴露背景：AD 脑内曾检出该菌与牙龈蛋白酶，小鼠反复口腔感染产生神经炎症和 Aβ 相关改变[@dominy2019pgingivalis; @ilievski2018oral; @chalmers2025primer]。对接与 100 ns 轨迹表明牙周炎来源微肽可以占据同一 PAS。四步勾勒可能机制。
 
-1. PAS 识别。  
-   12 条肽的最优构象集中在 PAS 和峡部入口（图2–4）。FLLHTTR 锚定 Asp74、Tyr72、His287（最优 −9.60 kcal/mol；图3C）。YLSLLQR 接触 PAS（Tyr72、Thr75）与催化入口（均值 −9.44 ± 0.09 kcal/mol；图4L）。LLHPLRL 从 Trp286/Tyr341 跨越至 His447（图4I）。HLLTLKKHV 到达 Tyr72 和 Aβ 驻留区 344–361 中的 Phe346。该几何即 Inestrosa 认定的促纤 PAS，也是 Atanasova 用 Aβ 占据的位点。
+1. PAS 识别与峡部入口占据。  
+   12 条肽的最优构象集中在人源 AChE 的 PAS 和峡部入口（PDB 4EY6；图2–4）。FLLHTTR 锚定经典 PAS 残基 Asp74、Tyr72、His287（最优 −9.60 kcal/mol；图3C）。YLSLLQR 接触 PAS（Tyr72、Thr75）与催化入口（三次均值 −9.44 ± 0.09 kcal/mol；图4L）。LLHPLRL 从 PAS 门控残基 Trp286/Tyr341 跨越至催化 His447（图4I）。HLLTLKKHV 到达 Tyr72 以及 Aβ 驻留区 344–361 中的 Phe346。该几何即 Inestrosa 认定的促纤位点，也是 Atanasova 用 Aβ 占据的 PAS。连接三联体与 PAS 的芳香峡部早先在电鳗 AChE 上被定位[@kryger1999e2020; @cheung2012ache]。Vina 在固定网格内排序构象，分数不是实验自由能[@trott2010vina; @eberhardt2021vina]。
 
-2. 持续的酶–肽复合物。  
-   100 ns 内折叠保持球状（RMSD 0.16–0.19 nm，Rg 2.30–2.31 nm，螺旋约 33%/折叠约 17%；图5–7）。FLLHTTR 与 YLSLLQR 后期 RMSD 比 apo 更紧，肽停在表面并使蛋白变硬，而不是把它撑开。分子间氢键持续：FLLHTTR 维持密极性网（7.03 ± 1.28；图6F），YLSLLQR 均值 2.93 ± 1.14，ALLLHRC 在早期重排后仍保留 7 对接触。Lushchekina 与 Atanasova 描述过表面结合、不解离的 AChE–Aβ 复合物；口腔微肽在此出现同一模式。
+2. 表面结合的酶–肽复合物。  
+   100 ns 内酶保持球状（RMSD 0.16–0.19 nm，Rg 2.30–2.31 nm，螺旋约 33%/折叠约 17%；图5–7）。FLLHTTR 与 YLSLLQR 复合物后期 RMSD 低于 apo（0.1640 和 0.1625 nm，相对 0.1897 nm），肽停在表面并使折叠变硬。分子间氢键持续：FLLHTTR 全程维持密极性网（7.03 ± 1.28；图6F），YLSLLQR 均值 2.93 ± 1.14，ALLLHRC 在早期重排后仍保留 7 对接触。微肽自拟合 RMSD 以 YLSLLQR 最低（0.0911 nm）、ALLLHRC 最高（0.2518 nm）。质心 RDF 峰位于 1.22–1.80 nm，符合表面驻留而非本体溶剂。Lushchekina 与 Atanasova 描述过表面结合、不解离的 AChE–Aβ 复合物；口腔微肽在此出现同一占据模式，窗口为 100 ns 而非 1 μs。
 
 3. 乙酰胆碱进入受限。  
-   PAS 位于通向三联体的 20 Å 峡部入口[@hampel2018cholinergic; @cheung2012ache]。占据 Asp74/Tyr72/Trp286/Tyr341 可在催化核心仍折叠时妨碍底物进入（B 面板 RMSF 低）。对接到 PAS 的同一构象因此打中 AD 的胆碱能轴。
+   PAS 位于通向催化三联体的 20 Å 峡部入口[@hampel2018cholinergic; @cheung2012ache]。占据 Asp74/Tyr72/Trp286/Tyr341 可在催化核心仍折叠时妨碍底物进入（图5–7 的 B 面板 RMSF 低）。对接到 PAS 的构象因此切入 AD 的胆碱能轴：基底前脑丢失之后，突触处乙酰胆碱本已减少，入口再被占据。
 
 4. 病理性伴侣活性。  
-   因为 PAS 是已记录的促纤位点[@inestrosa1996ache; @deferrari2001motif]，停在那里的异源肽可降低内源 Aβ 的成核壁垒。FLLHTTR 在 PAS 上提供持续极性网（图6F），与对接构象一致（图3C）。YLSLLQR 埋藏表面（SASA 209.71 对 212.25 nm²；图7C），结合肽最刚（自拟合 RMSD 0.0911 nm）。Lushchekina 的成核中心图景于是映射到这些复合物：折叠的 AChE 出示覆肽 PAS，Aβ 寡聚体可在其上共组装。AChE–Aβ 组装本已比游离 Aβ 更突触毒性[@inestrosa1996ache]；细菌微肽占据同一位点，提供形成杂合晶核的可能路径。
+   PAS 是已记录的促纤位点[@inestrosa1996ache; @deferrari2001motif]，停在那里的异源肽可降低内源 Aβ 的成核壁垒。FLLHTTR 在 PAS 上提供持续极性网（图6F），与对接构象一致（图3C）。YLSLLQR 埋藏表面（SASA 209.71 对 212.25 nm²；图7C），结合肽最刚。折叠的 AChE 于是出示覆肽 PAS，Aβ 寡聚体可在其上共组装，这是把 Lushchekina 的成核中心图景用到口腔配体。AChE–Aβ 组装本已比游离 Aβ 更突触毒性[@inestrosa1996ache]。细菌微肽占据同一位点，提供形成杂合晶核的可能路径。
 
 ### 从口腔到皮层 AChE
 
-慢性牙周炎可通过上皮破坏、牙龈蛋白酶和囊泡把 *P. gingivalis* 产物送入血液[@guo2010gingipain; @ho2015omv]。细胞因子与蛋白酶增加 BBB 渗漏，因而短、富亮氨酸、带正电且 BBB 高分（该标签在健康库中几乎同样常见）的肽有可能到达间质液[@chalmers2025primer; @dominy2019pgingivalis]。PAS 对接随后在既是胆碱水解酶、又是淀粉样伴侣的酶上给出落点。在这一草图中，12 条序列之所以可称为致病候选，是因为它们占据实验已定位的 Aβ 结合 PAS 并在 100 ns 内保持结合，而不是因为 RMSD 升高。
+慢性牙周炎可通过破损上皮、牙龈蛋白酶和外膜囊泡把 *P. gingivalis* 产物送入血液[@guo2010gingipain; @ho2015omv]。全身细胞因子与蛋白酶增加 BBB 渗漏[@chalmers2025primer]。短、富亮氨酸、带正电且 BBB 高分——该标签在健康库中几乎同样常见——的肽原则上可以到达间质液[@dominy2019pgingivalis; @gu2024bbb]。PAS 对接随后在既是胆碱水解酶、又是淀粉样伴侣的酶上给出落点。综合分析把牙周病与认知障碍联系起来，效应随病例定义而变动[@larvin2023periodontalcognition]；AD 队列中牙周炎与后续下降相关[@ide2016periodontitis]。两样本孟德尔随机化并未支持牙周病对 AD 的遗传因果效应[@hu2024mendelian]。把这 12 条当作致病候选，是因为它们占据实验已定位的 Aβ 结合 PAS 并在 100 ns 内保持结合。复合物 RMSD 处于或低于 apo，是折叠酶的局部适应，既不能说明肽无害，也不能证明它在组织中成核淀粉样。
+
+计算因而把通常分开的三块文献连起来：口腔 smORF 肽空间[@sberro2019smallgenes; @torres2024peptideantibiotics]、AChE 的 PAS 伴侣活性[@inestrosa1996ache; @atanasova2020md]，以及牙周炎–AD 暴露背景[@dominy2019pgingivalis; @ilievski2018oral]。它支持的是有边界的结构假说，不能替代实测表达、转运、亲和力或 Aβ 聚集实验。
 
 ## 结论
 
-12 条 7–9 aa 牙周炎微肽对接到人源 AChE。FLLHTTR、YLSLLQR 与 ALLLHRC 在 100 ns 内停在表面且不使酶解折叠。FLLHTTR 形成最密 PAS 氢键网；YLSLLQR 是唯一收缩表面积的复合物。对照淀粉样级联[@selkoe2016amyloid]、胆碱能假说[@hampel2018cholinergic]以及 Inestrosa、Lushchekina 与 Atanasova 的 PAS 伴侣实验，这些计算支持一种可能机制：口腔致病肽占据 AChE，妨碍乙酰胆碱进入，并在同一 PAS 上与 Aβ 共成核。
+牙周炎标记口腔 smORF 库中的 12 条 7–9 aa 肽对接到人源 AChE。FLLHTTR、YLSLLQR 与 ALLLHRC 在 100 ns 内停在表面且不使酶解折叠。FLLHTTR 形成最密 PAS 氢键网；YLSLLQR 是唯一收缩溶剂可及面积的复合物。健康库与牙周炎库的 BBB 高分率相差很小；群体感应是唯一牙周炎高出 ≥1 个百分点的头。对照淀粉样级联[@selkoe2016amyloid]、胆碱能假说[@hampel2018cholinergic]以及 Inestrosa、Lushchekina 与 Atanasova 的 PAS 伴侣工作，这些计算支持一种可能机制：口腔致病肽占据 AChE，妨碍乙酰胆碱进入，并在同一 PAS 上与 Aβ 共成核。
 
 ## 参考文献
 
