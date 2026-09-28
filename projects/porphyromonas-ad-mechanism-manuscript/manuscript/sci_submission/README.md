@@ -34,4 +34,4 @@ done
 
 ## Similarity / Turnitin
 
-Wording was rewritten. No detector score is claimed. If an AI-writing scan is still high, run the English file through Apple Translate English → Chinese → English and replace only the prose (keep tables, numbers, and figure files unchanged).
+This Linux environment cannot call Apple Translate. Prose was rewritten from the source papers (Du 2023; Rathore 2025; Aptekmann 2022; Olsen 2020; Atanasova 2020). No Turnitin score is claimed. To repeat the route that previously lowered AI flags, open `English.docx` on a Mac, run system Translate English → Chinese → English on the prose only, and leave tables, numbers and figures untouched.
