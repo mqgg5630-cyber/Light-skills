@@ -1,0 +1,77 @@
+
+### protein peptide molecular docking pose prediction
+  - diffdock                         score=14.55  :: DiffDock and DiffDock-L molecular docking. Use for protein-small-molecule pose prediction from PDB or sequence plus SMIL
+  - molecular-dynamics               score=7.4    :: Run and analyze molecular dynamics simulations with OpenMM and MDAnalysis. Set up protein/small molecule systems, define
+  - biopython                        score=4.05   :: Comprehensive molecular biology toolkit. Use for sequence manipulation, file parsing (FASTA/GenBank/PDB), phylogenetics,
+  - hypothesis-generation            score=3.75   :: Formulate evidence-bounded scientific questions, candidate hypotheses, rival explanations, causal or associational claim
+
+### molecular dynamics simulation trajectory free energy
+  - molecular-dynamics               score=18.7   :: Run and analyze molecular dynamics simulations with OpenMM and MDAnalysis. Set up protein/small molecule systems, define
+  - biopython                        score=3.0    :: Comprehensive molecular biology toolkit. Use for sequence manipulation, file parsing (FASTA/GenBank/PDB), phylogenetics,
+  - rdkit                            score=2.85   :: Cheminformatics toolkit for fine-grained molecular control. SMILES/SDF parsing, descriptors (MW, LogP, TPSA), fingerprin
+  - diffdock                         score=2.7    :: DiffDock and DiffDock-L molecular docking. Use for protein-small-molecule pose prediction from PDB or sequence plus SMIL
+
+### protein structure prediction language model embedding
+  - diffdock                         score=9.75   :: DiffDock and DiffDock-L molecular docking. Use for protein-small-molecule pose prediction from PDB or sequence plus SMIL
+  - esm                              score=8.85   :: Use when working directly with the `esm` Python SDK, ESM3 or ESMC model IDs, Forge/Biohub inference clients, or ESMFold2
+  - pkpd-modeling                    score=7.55   :: Pharmacokinetic and pharmacodynamic modelling and simulation - non-compartmental analysis, compartmental and population 
+  - light-project-structure          score=5.3    :: - Audit, plan, scaffold, and safely migrate research project structures across greenfield, existing Git/non-Git reposito
+
+### cheminformatics rdkit ligand
+  - rdkit                            score=7.1    :: Cheminformatics toolkit for fine-grained molecular control. SMILES/SDF parsing, descriptors (MW, LogP, TPSA), fingerprin
+  - diffdock                         score=1.95   :: DiffDock and DiffDock-L molecular docking. Use for protein-small-molecule pose prediction from PDB or sequence plus SMIL
+  - molecular-dynamics               score=1.5    :: Run and analyze molecular dynamics simulations with OpenMM and MDAnalysis. Set up protein/small molecule systems, define
+
+### systematic literature review pubmed citation
+  - literature-review                score=16.75  :: Conduct comprehensive, systematic literature reviews using multiple academic databases (PubMed, arXiv, bioRxiv, Semantic
+  - light-literature-search          score=9.2    :: - Light 科研主线第 1 步·文献调研:在线多源检索(OpenAlex/arXiv/Crossref/Europe PMC/DOAJ,全程免 key)→ 产出**不是论文列表,是可直接喂 idea 的"领域地图"**:近三年前沿 + 
+  - light-citation                   score=6.8    :: Verify scholarly references and claim-citation support for Light stage 10. Use when auditing a manuscript, claim map, bi
+  - paper-lookup                     score=6.75   :: Search 18 scholarly APIs for papers, preprints, citations, open-access full text, repository records, and journal OA sta
+
+### paper lookup doi metadata verification
+  - paper-lookup                     score=11.2   :: Search 18 scholarly APIs for papers, preprints, citations, open-access full text, repository records, and journal OA sta
+  - light-citation                   score=7.35   :: Verify scholarly references and claim-citation support for Light stage 10. Use when auditing a manuscript, claim map, bi
+  - research-lookup                  score=6.95   :: "Compile current scholarly evidence for a scientific manuscript or research brief. Use when the user explicitly asks to 
+  - light-typesetting                score=4.2    :: Build and preflight submission-ready LaTeX/PDF artifacts for Light stage 11. Use when receiving a paper-writing manuscri
+
+### hypothesis generation mechanism
+  - hypothesis-generation            score=7.15   :: Formulate evidence-bounded scientific questions, candidate hypotheses, rival explanations, causal or associational claim
+  - light-idea-generation            score=4.85   :: - Light 科研主线第 3 步·提 idea:从模糊方向/数据/文献**结构化发散**(激发算子系统生成,不是泛泛头脑风暴) → 产**值得做且做得成的分层候选 idea**(moonshot 冲刺/solid 稳妥/safe 保底),
+  - light-idea-critique              score=3.3    :: - Light 科研主线第 4 步·审 idea：以**顶会审稿人标准严审** idea，**撞车/无创新 fatal flaw 一票否决**(critical 门)， 逼出真能发表的 idea。何时用：用户问"这 idea 行不行/够不够
+  - statistical-analysis             score=2.4    :: Guided statistical analysis for research data - test selection, assumption checking, effect sizes, power analysis, Bayes
+
+### critical appraisal reviewer attack
+  - scientific-critical-thinking     score=5.0    :: Evaluate scientific claims and evidence quality. Use for assessing experimental design validity, identifying biases and 
+  - light-review-rebuttal            score=3.75   :: Build auditable peer-review revision and author-response packages for Light stage 13. Use after receiving reviewer comme
+  - light-idea-critique              score=3.45   :: - Light 科研主线第 4 步·审 idea：以**顶会审稿人标准严审** idea，**撞车/无创新 fatal flaw 一票否决**(critical 门)， 逼出真能发表的 idea。何时用：用户问"这 idea 行不行/够不够
+  - light-research-ethics            score=2.55   :: - Light 科研诚信与伦理全生命周期常驻红线门:在研究分诊、审批、采集、变更、分析、投稿、发布与出版后检查 学术不端/数据造假/统计自洽/结论夸大/幻觉与撤稿 引用/自我抄袭/隐私/版权/署名与 AI 披露/软著专利权属/论文工厂洗稿等
+
+### statistics power reproducibility experiment design
+  - light-research-plan              score=6.6    :: - Light 科研主线第 5 步·研究方案与实验设计：把 idea-critique 放行的 idea 与 data feasibility 拆成**能真执行、能写进论文、 能复现**的 question/estimand、实验矩阵与预注
+  - statistical-analysis             score=6.45   :: Guided statistical analysis for research data - test selection, assumption checking, effect sizes, power analysis, Bayes
+  - scientific-critical-thinking     score=6.0    :: Evaluate scientific claims and evidence quality. Use for assessing experimental design validity, identifying biases and 
+  - light-experiment-coding          score=5.3    :: - Light 科研主线 stage 6：把冻结的 question/estimand、experiment matrix、pre-registration 与 data lineage 落成最小可运行、测试先行、无泄漏、可复现且能交给 r
+
+### pharmacokinetics PBPK exposure modeling
+  - pkpd-modeling                    score=7.7    :: Pharmacokinetic and pharmacodynamic modelling and simulation - non-compartmental analysis, compartmental and population 
+  - research-lookup                  score=0.45   :: "Compile current scholarly evidence for a scientific manuscript or research brief. Use when the user explicitly asks to 
+  - esm                              score=0.3    :: Use when working directly with the `esm` Python SDK, ESM3 or ESMC model IDs, Forge/Biohub inference clients, or ESMFold2
+  - hypothesis-generation            score=0.3    :: Formulate evidence-bounded scientific questions, candidate hypotheses, rival explanations, causal or associational claim
+
+### scientific manuscript writing provenance
+  - scientific-writing               score=12.55  :: Draft, revise, and audit scientific manuscripts or reports with explicit evidence provenance, reporting-guideline covera
+  - scientific-critical-thinking     score=6.95   :: Evaluate scientific claims and evidence quality. Use for assessing experimental design validity, identifying biases and 
+  - light-typesetting                score=6.6    :: Build and preflight submission-ready LaTeX/PDF artifacts for Light stage 11. Use when receiving a paper-writing manuscri
+  - scientific-visualization         score=6.05   :: Create and audit truthful, accessible, publication-ready scientific figures with Matplotlib, Seaborn, or Plotly. Use for
+
+### word document docx report formatting
+  - docx                             score=12.95  :: "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files) or Word templa
+  - light-file-reading               score=7.2    :: - Light 多格式文件深度理解常驻技能：强大地读 Word / PDF / PPTX / Excel / CSV / 图片 / 视频 / 代码 / 压缩包，**不只提取文字，而是理解结构 / 图表 / 数据 / 格式要求 / 隐含意图*
+  - scientific-writing               score=4.8    :: Draft, revise, and audit scientific manuscripts or reports with explicit evidence provenance, reporting-guideline covera
+  - literature-review                score=3.9    :: Conduct comprehensive, systematic literature reviews using multiple academic databases (PubMed, arXiv, bioRxiv, Semantic
+
+### figure plotting publication quality
+  - scientific-visualization         score=5.25   :: Create and audit truthful, accessible, publication-ready scientific figures with Matplotlib, Seaborn, or Plotly. Use for
+  - light-figure                     score=5.15   :: - Light 科研主线第 9 步·图表：图服务论点（每图支撑哪条 claim、删了缺什么）+ 出版级规格（栏宽/字号/色盲安全/ 误差棒+n+显著性）+ 视觉诚实（不偷偷截 y 轴/不双 y 轴伪相关/不 jet-rainbow）+ 渲染
+  - scientific-critical-thinking     score=3.9    :: Evaluate scientific claims and evidence quality. Use for assessing experimental design validity, identifying biases and 
+  - light-typesetting                score=3.3    :: Build and preflight submission-ready LaTeX/PDF artifacts for Light stage 11. Use when receiving a paper-writing manuscri
