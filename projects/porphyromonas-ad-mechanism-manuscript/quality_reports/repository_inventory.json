@@ -4,8 +4,8 @@
     "quality_reports/repository_inventory.json (self-referential output)",
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
-  "total_files": 235,
-  "total_bytes": 107056554,
+  "total_files": 242,
+  "total_bytes": 121773468,
   "by_top_level_group": {
     "docking": {
       "files": 5,
@@ -16,12 +16,12 @@
       "bytes": 573723
     },
     "manuscript": {
-      "files": 65,
-      "bytes": 94886617
+      "files": 71,
+      "bytes": 109602116
     },
     "project_root": {
       "files": 4,
-      "bytes": 61530
+      "bytes": 62168
     },
     "quality_reports": {
       "files": 43,
@@ -44,8 +44,8 @@
       "bytes": 190862
     },
     "source_materials": {
-      "files": 36,
-      "bytes": 3837921
+      "files": 37,
+      "bytes": 3838698
     },
     "submission": {
       "files": 6,
@@ -55,8 +55,8 @@
   "files": [
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
-      "size_bytes": 21110,
-      "sha256": "f07e211537afdf2550a6b2e1d89dbfe6258d1bf1fade7bf5287430b332cd6003"
+      "size_bytes": 21748,
+      "sha256": "e525477858bd7c191d85c8a94dd370f9abd57b94c15afc21dab21d9a758816d2"
     },
     {
       "path": "README.md",
@@ -314,6 +314,16 @@
       "sha256": "fe1c6f48fe1f00d0d91e41a500858afe4f579d92f6194ff082079eb30eff66a5"
     },
     {
+      "path": "manuscript/figures/fig_screening_cascade.png",
+      "size_bytes": 263154,
+      "sha256": "1e06998641f287d4de9e9eab26402edb882850c152c1e41c237edccc0df4904f"
+    },
+    {
+      "path": "manuscript/figures/fig_screening_cascade.svg",
+      "size_bytes": 8995,
+      "sha256": "352ef00d564587f47cc40b04e68ddf2cdeae1151e2d6376862bf598ec4c39183"
+    },
+    {
       "path": "manuscript/figures/prioritization_funnel.png",
       "size_bytes": 376757,
       "sha256": "841addbcf1b5398bf657a49aa203d2196348a53a29b1db145c29a642018026fe"
@@ -502,6 +512,26 @@
       "path": "manuscript/sci_combined/局限性.md",
       "size_bytes": 1500,
       "sha256": "bce40765e412e34f1367f2bc0fe535b95ba4b1963a44a6d09dcc00df474f2af4"
+    },
+    {
+      "path": "manuscript/sci_submission/Chinese.docx",
+      "size_bytes": 7188764,
+      "sha256": "0e4c493a7bc7af48fcd2a8506c084bf31b8ac714e07e796410620bcc6a8b4cb9"
+    },
+    {
+      "path": "manuscript/sci_submission/Chinese.md",
+      "size_bytes": 31540,
+      "sha256": "f792c5377d692445eeb0dbc1efd438342acb2b69a22c671a0eb855721fcb3b2c"
+    },
+    {
+      "path": "manuscript/sci_submission/English.docx",
+      "size_bytes": 7188243,
+      "sha256": "58bfbf60069aac83ae2019f5e281dc87029d59637ab24120c43d5f740b99391e"
+    },
+    {
+      "path": "manuscript/sci_submission/English.md",
+      "size_bytes": 34803,
+      "sha256": "3ee31ccd6ce0462b69185a21c88e549cb0dafa6edd2adc21146c4b5e26a98804"
     },
     {
       "path": "manuscript/supplementary_tables_bilingual.docx",
@@ -1167,6 +1197,11 @@
       "path": "source_materials/md_results/local_vina_docking_summary.csv",
       "size_bytes": 526,
       "sha256": "7dd9c26e9f5b0cdf4e8b87a55cb498ec5e5f10fe0292eb880c5d74cacd769f82"
+    },
+    {
+      "path": "source_materials/peptide_physicochemical_12.csv",
+      "size_bytes": 777,
+      "sha256": "8e18e1bc5e2f2b2a6f8216b2a1f74d440db9aea07f7ad2ecc4578b51fd82ed84"
     },
     {
       "path": "source_materials/unidl4biopep_healthy_full_library_22tasks.csv",
