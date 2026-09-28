@@ -1,12 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1280" viewBox="0 0 1200 1280">
-<rect width="1200" height="1280" fill="#fff"/>
-<text x="80" y="50" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" fill="#1B4F72">Screening cascade</text>
-<rect x="40" y="80" width="520" height="130" rx="10" fill="#F4F6F7" stroke="#7F8C8D" stroke-width="2"/>
-<text x="70" y="112" font-family="Arial" font-size="18" font-weight="700">Healthy</text>
-<text x="70" y="152" font-family="Arial" font-size="28" font-weight="700" fill="#1B4F72">11.27 million smORFs</text>
-<text x="70" y="186" font-family="Arial" font-size="16" fill="#555">22 models only · BBB 9.72%</text>
-<rect x="640" y="80" width="520" height="130" rx="10" fill="#EAF4FA" stroke="#1B4F72" stroke-width="3"/>
-<text x="670" y="112" font-family="Arial" font-size="18" font-weight="700">Periodontitis</text>
-<text x="670" y="152" font-family="Arial" font-size="28" font-weight="700" fill="#0072B2">11.72 million smORFs</text>
-<text x="670" y="186" font-family="Arial" font-size="16" fill="#555">22 models, then matched</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1620" viewBox="0 0 1600 1620">
+  <rect width="1600" height="1620" fill="#ffffff"/>
+  <text x="48" y="58" font-family="Arial,Helvetica,sans-serif" font-size="36" font-weight="700" fill="#1B4F72">Screening cascade</text>
+  <rect x="40" y="90" width="720" height="200" rx="14" fill="#F2F4F5" stroke="#7F8C8D" stroke-width="3"/>
+  <text x="70" y="135" font-family="Arial" font-size="26" font-weight="700" fill="#111">Healthy</text>
+  <text x="70" y="190" font-family="Arial" font-size="44" font-weight="700" fill="#1B4F72">11.27 million</text>
+  <text x="70" y="245" font-family="Arial" font-size="24" fill="#333">smORFs    BBB 9.72%</text>
+  <rect x="840" y="90" width="720" height="200" rx="14" fill="#EAF4FA" stroke="#1B4F72" stroke-width="4"/>
+  <text x="870" y="135" font-family="Arial" font-size="26" font-weight="700" fill="#111">Periodontitis</text>
+  <text x="870" y="190" font-family="Arial" font-size="44" font-weight="700" fill="#0072B2">11.72 million</text>
+  <text x="870" y="245" font-family="Arial" font-size="24" fill="#333">smORFs    then matched</text>
+  <text x="40" y="1575" font-family="Arial" font-size="22" fill="#444">Healthy library scored only; not proteome-matched.</text>
 </svg>

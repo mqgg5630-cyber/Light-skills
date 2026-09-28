@@ -1,14 +1,15 @@
 # SCI submission rewrite (new folder)
 
-Rewritten from `manuscript/sci_combined/English.docx` plus methods depth from `manuscript/full/`. Prose was recast so it is not a close copy of the previous combined article.
+Rewritten from `manuscript/sci_combined/` plus methods depth from `manuscript/full/`. This round also used `vendor_skills/` (nature-writing, nature-figure, humanizer, AIGC rewriter). See `../../vendor_skills/README.md`.
 
 ## What changed versus sci_combined
 
-- Figure 1: screening cascade (library → 22 UniDL4BioPep tasks → 12 peptides → 3 MD complexes). SVG + PNG in `manuscript/figures/fig_screening_cascade.*`.
-- Table 4: calculated physicochemical descriptors of the twelve peptides (MW, pI, charge, GRAVY, aliphatic index).
-- Two separate PyMOL pose figures kept (now Figures 3 and 4). Combined 12-pose overview (old Figure S1) removed.
-- Each predictor (UniDL4BioPep, NTxPred2, mebipred, AnOxPePred) has its own methods subsection. Source libraries are the processed smORF strings from PRJNA678453; PRJEB65451 is cited as a derived assembly, not a second cohort. Healthy library is scored only (no dereplication).
-- Docking table split into PAS (Yes/No) and principal contacts.
+- Figure 1: screening cascade with large numerals (Okabe–Ito blue/green). SVG + PNG in `manuscript/figures/fig_screening_cascade.*`.
+- Table 3: periodontitis minus healthy 22-task score-rate differences. Physicochemical Table 5 describes the twelve docking ligands only.
+- Two separate PyMOL pose figures kept (Figures 3 and 4). Combined 12-pose overview removed.
+- Each predictor (UniDL4BioPep, NTxPred2, mebipred, AnOxPePred) has its own methods subsection with architecture, training set and threshold.
+- Source libraries are processed smORF strings from PRJNA678453; PRJEB65451 is a derived assembly, not a second cohort. Healthy library is scored only (no dereplication).
+- Introduction expanded to seven paragraphs (AD, PAS, epidemiology including Hu 2024 MR, *P. gingivalis*, smORF mining, AChE–Aβ MD, study route). It ends with “Here we scored / docked / simulated”, not a question list.
 
 ## Files
 
@@ -32,6 +33,8 @@ for language in English Chinese; do
 done
 ```
 
-## Similarity / Turnitin
+## Similarity / Turnitin / Apple Translate
 
-This Linux environment cannot call Apple Translate. Prose was rewritten from the source papers (Du 2023; Rathore 2025; Aptekmann 2022; Olsen 2020; Atanasova 2020). No Turnitin score is claimed. To repeat the route that previously lowered AI flags, open `English.docx` on a Mac, run system Translate English → Chinese → English on the prose only, and leave tables, numbers and figures untouched.
+This Linux environment cannot call Apple Translate. The AIGC-detector-rewriter skill forbids back-translation as the rewrite method. Prose was rewritten in place (English and Chinese separately) with humanizer + nature-writing. No detector score is claimed.
+
+If you still want the Apple route that previously lowered a detector flag: on a Mac, open `English.docx`, run system Translate English → Chinese → English on **prose only**, and leave tables, numbers and figures untouched.

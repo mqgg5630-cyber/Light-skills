@@ -8,13 +8,19 @@
 
 ## 引言
 
-AD 并非单一线性级联。淀粉样、tau、胆碱能缺失、免疫激活与血管损伤并行[@scheltens2021alzheimer]。淀粉样仍居中心：APP 加工产生 Aβ40/Aβ42，寡聚体损伤突触，家族性 APP/PSEN 突变改变 Aβ 长度与产量[@selkoe2016amyloid]。基底前脑乙酰胆碱丢失解释相当部分认知表型，故 AChE 抑制剂仍在常规使用[@hampel2018cholinergic]。对该酶而言，催化并非全部。AChE 经 PAS 加速 Aβ 成纤，AChE–Aβ 颗粒毒性高于游离 Aβ[@inestrosa1996ache]。一段疏水 PAS 基序即足以驱动这种伴侣效应[@deferrari2001motif]。PAS 因此是胆碱能衰竭与淀粉样沉积之间的结构铰链。
+阿尔茨海默病（AD）在漫长临床前过程中同时出现淀粉样沉积、tau 病理、突触衰竭、免疫激活和血管损伤[@scheltens2021alzheimer]。APP 经 β、γ 分泌酶依次切割，释放 Aβ40 和 Aβ42；可溶寡聚体损伤突触；家族性 APP/PSEN 突变改变肽长度和产量[@selkoe2016amyloid]。淀粉样负荷解释不了疾病的空间与临床异质性，因此外周炎症暴露被当作易感性的可能修饰因素，而不是单一充分病因。
 
-慢性牙周炎维持低度炎症负荷，并使微生物产物进入血液[@chalmers2025primer]。口腔活动具物种和位点特异性，16S 丰度不能替代分子配体[@belstrom2021periodontitis]。牙龈卟啉单胞菌的牙龈蛋白酶与外膜囊泡是一对研究较充分的毒力因子[@guo2010gingipain; @ho2015omv]。综合分析把牙周病与认知障碍联系起来，效应随病例定义而变动[@larvin2023periodontalcognition]。AD 队列中牙周炎与后续下降相关[@ide2016periodontitis]。AD 脑内曾检出 *P. gingivalis* 与牙龈蛋白酶[@dominy2019pgingivalis]，小鼠反复口腔感染可产生神经炎症和 Aβ 相关改变[@ilievski2018oral]。若短口腔肽能落在 AChE 上，这一暴露背景便具有机制意义[@hu2024mendelian]。
+基底前脑乙酰胆碱丢失解释相当部分认知表型，故 AChE 抑制剂仍在常规使用[@hampel2018cholinergic]。对该酶而言，催化只是一部分功能。AChE 经外周阴离子位点（PAS）加速 Aβ 成纤，AChE–Aβ 颗粒毒性高于游离肽[@inestrosa1996ache]。一段疏水 PAS 基序即足以产生这种伴侣效应[@deferrari2001motif]。PAS 导向小分子可在生化体系中阻断 AChE 诱导的聚集[@bartolini2003pas]。同一蛋白表面因而把胆碱能衰竭与淀粉样沉积连在一起。
 
-微生物组 smORF 编码大量尚未绘图的小蛋白[@sberro2019smallgenes; @durrant2021sorf]。7–9 aa 牙周炎肽能否占据 Aβ 结合 PAS，是结构问题。加速 MD 把 Aβ 拉到 AChE 表面，并把该酶视为成核中心[@lushchekina2017amd]。1 μs、以 PAS 为中心的 AChE–Aβ 轨迹保持结合，主驻留区为 344–361[@atanasova2020md]。PAS 导向小分子可在试管中阻断 AChE 诱导的 Aβ 聚集[@bartolini2003pas]。PDB 4EY6 提供 2.40 Å 人源 AChE 框架[@cheung2012ache]。连接催化三联体与 PAS 的芳香峡部早先在电鳗 AChE 上被定位[@kryger1999e2020]。
+慢性牙周炎在破损黏膜屏障维持低度炎症负荷，并使微生物产物进入血液[@chalmers2025primer]。口腔活动具物种和位点特异性，16S 丰度不能替代分子配体[@belstrom2021periodontitis]。综合分析报告牙周病与认知障碍相关，但效应随病例定义而变动[@larvin2023periodontalcognition]。AD 队列中牙周炎与后续下降相关[@ide2016periodontitis]。两样本孟德尔随机化并未支持牙周病对 AD 的遗传因果效应[@hu2024mendelian]。流行病学因此推动分子搜寻，本身并不给出配体。
 
-因此提出三个相连问题。第一，两库完成 22 项 UniDL4BioPep 打分后，目录匹配还留下哪些牙周炎肽？第二，漏斗中的 12 条 7–9 aa 序列是否接触人源 AChE 的 PAS？第三，其中三种复合物能否在 100 ns 内表面驻留且不使酶解折叠？
+牙龈卟啉单胞菌的牙龈蛋白酶与外膜囊泡是一对已定位的毒力因子[@guo2010gingipain; @ho2015omv]。AD 脑内曾检出该菌与牙龈蛋白酶[@dominy2019pgingivalis]，小鼠反复口腔感染可产生神经炎症和 Aβ 相关改变[@ilievski2018oral]。这些观察支持检查口腔产物，但并不能单独指出占据 AChE 的肽。
+
+微生物组 smORF 编码大量尚未绘图的小蛋白[@sberro2019smallgenes; @durrant2021sorf]。人体微生物组抗菌肽挖掘先对数百万条翻译开放阅读框打分，再做实验过滤[@torres2024peptideantibiotics]。UniDL4BioPep 在 ESM-2 嵌入上提供二十余个二分类活性头[@du2023unidl4biopep]。此处沿用同一顺序：先预测，再与目录匹配。分类器分数回答不了结构问题，即 7–9 aa 牙周炎肽能否占据 Aβ 结合 PAS。
+
+加速 MD 把 Aβ 放到 AChE 表面，并把该酶视为成核中心[@lushchekina2017amd]。1 μs、以 PAS 为中心的 AChE–Aβ 轨迹保持结合，主驻留区为残基 344–361[@atanasova2020md]。PDB 4EY6 给出 2.40 Å 人源 AChE 对接框架[@cheung2012ache]。连接催化三联体与 PAS 的芳香峡部早先在电鳗 AChE 上被定位[@kryger1999e2020]。仍缺少的是从口腔 smORF 取出、并在同一 PAS 上检验的肽水平配体。
+
+本研究对 PRJNA678453 已处理好的口腔 smORF 文库用 22 个 UniDL4BioPep 头打分，比较健康与牙周炎命中率，将牙周炎分支与口腔基因组和宏蛋白质组目录匹配，再用 NTxPred2、mebipred 和 AnOxPePred 收窄名单。12 条 7–9 aa 肽对接到人源 AChE。三个复合物与 apo 酶一起做 100 ns 模拟，检验肽是否留在 PAS 上且不使折叠打开。
 
 ## 材料与方法
 
