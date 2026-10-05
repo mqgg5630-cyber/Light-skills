@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" lang="zh-CN" font-family="Microsoft YaHei" data-pptx-page-role="content">
+  <rect id="page-bg" x="0" y="0" width="1600" height="900" fill="#0E1A2B" data-pptx-role="background"/>
+  <g id="mechanism" data-pptx-bounds="0 0 1600 870">
+    <rect x="0" y="0" width="1600" height="170" fill="#15283F"/>
+    <rect x="0" y="162" width="1600" height="8" fill="#E0A458" fill-opacity="0.5"/>
+    <text x="110" y="82" font-size="24" fill="#E0A458">机制 4</text>
+    <text x="110" y="134" font-size="42" fill="#F2F6FA" font-weight="bold">先天免疫受体</text>
+    <rect x="110" y="234" width="6" height="48" fill="#E0A458"/>
+    <text x="140" y="270" font-size="27" fill="#E0A458" font-weight="bold">假设</text>
+    <text x="244" y="270" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">抗菌肽占住 Aβ 用的受体口袋，或改变受体对 Aβ 的识别，由此接上神经炎症这一层表型。</tspan>
+    </text>
+    <rect x="110" y="406" width="6" height="48" fill="#5BA6A8"/>
+    <text x="140" y="442" font-size="27" fill="#5BA6A8" font-weight="bold">做法</text>
+    <text x="244" y="442" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">FPR2 用 Aβ42 与 humanin 的复合物结构做口袋对接加膜环境 MD；CLIC1 按 LL-37 的路子算结合</tspan>
+    <tspan x="244" dy="40">面并看跨膜段插入倾向；TLR4–MD-2、CD14、RAGE 把候选肽当第二配体，比 pH 7.4 与 6.0。</tspan>
+    </text>
+    <rect x="110" y="618" width="6" height="48" fill="#C9705B"/>
+    <text x="140" y="654" font-size="27" fill="#C9705B" font-weight="bold">判据</text>
+    <text x="244" y="654" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">位点重合率、界面面积能否和 Aβ42 的 1166 Å² 同量级、TM6 外移这类激活构象指标。</tspan>
+    </text>
+    <rect x="110" y="776" width="1380" height="2" fill="#9FB3CF" fill-opacity="0.5"/>
+    <text x="110" y="824" font-size="20" fill="#9FB3CF">
+    <tspan x="110" dy="0">细胞端：小胶质炎症因子、NF-κB 报告、钙成像。LL-37 经 CLIC1 做出 AD 样表型，是现成的参照。</tspan>
+    </text>
+  </g>
+</svg>

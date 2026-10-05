@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" lang="zh-CN" font-family="Microsoft YaHei" data-pptx-page-role="content">
+  <rect id="page-bg" x="0" y="0" width="1600" height="900" fill="#0E1A2B" data-pptx-role="background"/>
+  <g id="mechanism" data-pptx-bounds="0 0 1600 870">
+    <rect x="0" y="0" width="1600" height="170" fill="#15283F"/>
+    <rect x="0" y="162" width="1600" height="8" fill="#E0A458" fill-opacity="0.5"/>
+    <text x="110" y="82" font-size="24" fill="#E0A458">机制 5</text>
+    <text x="110" y="134" font-size="42" fill="#F2F6FA" font-weight="bold">神经元膜界面</text>
+    <rect x="110" y="234" width="6" height="48" fill="#E0A458"/>
+    <text x="140" y="270" font-size="27" fill="#E0A458" font-weight="bold">假设</text>
+    <text x="244" y="270" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">抗菌肽对细菌膜的选择性一旦丧失，就会在含 GM1 的神经元膜上富集，把 Aβ 招到同一界面上促进成</tspan>
+    <tspan x="244" dy="40">核。</tspan>
+    </text>
+    <rect x="110" y="446" width="6" height="48" fill="#5BA6A8"/>
+    <text x="140" y="482" font-size="27" fill="#5BA6A8" font-weight="bold">做法</text>
+    <text x="244" y="482" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">建细菌内膜、含 GM1 与胆固醇的神经元膜、内皮膜三套；Martini 3 跑十几微秒看吸附和聚集，关键</tspan>
+    <tspan x="244" dy="40">构象回到全原子。</tspan>
+    </text>
+    <rect x="110" y="658" width="6" height="48" fill="#C9705B"/>
+    <text x="140" y="694" font-size="27" fill="#C9705B" font-weight="bold">判据</text>
+    <text x="244" y="694" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">两类膜的结合自由能差，也就是选择性；插入深度、膜厚与曲率扰动、水柱或孔的寿命。</tspan>
+    </text>
+    <rect x="110" y="776" width="1380" height="2" fill="#9FB3CF" fill-opacity="0.5"/>
+    <text x="110" y="824" font-size="20" fill="#9FB3CF">
+    <tspan x="110" dy="0">这条通道不需要抗菌肽直接结合 Aβ，独立于交叉成核。</tspan>
+    </text>
+  </g>
+</svg>

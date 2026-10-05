@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" lang="zh-CN" font-family="Microsoft YaHei" data-pptx-page-role="content">
+  <rect id="page-bg" x="0" y="0" width="1600" height="900" fill="#0E1A2B" data-pptx-role="background"/>
+  <g id="mechanism" data-pptx-bounds="0 0 1600 870">
+    <rect x="0" y="0" width="1600" height="170" fill="#15283F"/>
+    <rect x="0" y="162" width="1600" height="8" fill="#E0A458" fill-opacity="0.5"/>
+    <text x="110" y="82" font-size="24" fill="#E0A458">机制 3</text>
+    <text x="110" y="134" font-size="42" fill="#F2F6FA" font-weight="bold">tau 这一侧（可选）</text>
+    <rect x="110" y="234" width="6" height="48" fill="#E0A458"/>
+    <text x="140" y="270" font-size="27" fill="#E0A458" font-weight="bold">假设</text>
+    <text x="244" y="270" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">阳离子肽能否靠芳香堆积参与 tau 的异质 β-折叠。</tspan>
+    </text>
+    <rect x="110" y="406" width="6" height="48" fill="#5BA6A8"/>
+    <text x="140" y="442" font-size="27" fill="#5BA6A8" font-weight="bold">做法</text>
+    <text x="244" y="442" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">以 PHF6（306VQIVYK311）和 PHF6*（275VQIINK280）为界面做对接和增强采样。</tspan>
+    </text>
+    <rect x="110" y="578" width="6" height="48" fill="#C9705B"/>
+    <text x="140" y="614" font-size="27" fill="#C9705B" font-weight="bold">判据</text>
+    <text x="244" y="614" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">异质 β-折叠占比与界面氢键数。</tspan>
+    </text>
+    <rect x="110" y="776" width="1380" height="2" fill="#9FB3CF" fill-opacity="0.5"/>
+    <text x="110" y="824" font-size="20" fill="#9FB3CF">
+    <tspan x="110" dy="0">阴性结果同样有用：同为阳离子而相斥，说明效应选择性地走 Aβ 和受体两条线。</tspan>
+    </text>
+  </g>
+</svg>

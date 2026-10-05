@@ -1,0 +1,246 @@
+{
+  "schema": "ppt-master.pptx-postflight-report.v1",
+  "status": "passed",
+  "output": {
+    "path": "/home/user/Light-skills/projects/amp-ad-mechanism/outputs/抗菌肽-阿尔茨海默病-八个机制.pptx",
+    "bytes": 43799
+  },
+  "source": {
+    "svg_slide_count": 14,
+    "layout_definition_count": 0,
+    "fingerprint": {
+      "algorithm": "sha256",
+      "digest": "38d4ddf50409c4c64855f7b8fabd03669dcca65b65ff2d95a344a472646003a8",
+      "file_count": 14,
+      "files": [
+        {
+          "file": "P01.svg",
+          "sha256": "eeb118f73a06160f669a23da4f0c0964dfaf9ec7f1c1cd8a0a20a30c960bbcc9"
+        },
+        {
+          "file": "P02.svg",
+          "sha256": "5494f56e779f618d1ea2474f71e0ccbbaca60b22393fe31a7f8240bc4681d875"
+        },
+        {
+          "file": "P03.svg",
+          "sha256": "69d43ab6ee38dd9433f6de4219ce41bfc64cc0f3c5ca30bd60debf8f5c18913d"
+        },
+        {
+          "file": "P04.svg",
+          "sha256": "f3fa76f64ba0aecb75a046000489a7d0492975b6a33a1a9e410c4ab864e6c8a9"
+        },
+        {
+          "file": "P05.svg",
+          "sha256": "ddd3b793f43f248093af4e5d9c7904d3c9fad69bf95de587529c820812b1d314"
+        },
+        {
+          "file": "P06.svg",
+          "sha256": "cd8188414f13c5b861e83ab861e0004a4cb40913ca073df99a3cb43e2d6769b9"
+        },
+        {
+          "file": "P07.svg",
+          "sha256": "45356644735ebc77d7015adf7c5fc0fef469ba558c5baa36ae850f519c27639c"
+        },
+        {
+          "file": "P08.svg",
+          "sha256": "df7a7195158910b94e0e8650bc307e39f70e29238e94d8d17aaa140534c5eea0"
+        },
+        {
+          "file": "P09.svg",
+          "sha256": "549ab4bdaefd0d21310562fac6f08a8926109b4f59164dbff2ce85244333c287"
+        },
+        {
+          "file": "P10.svg",
+          "sha256": "07b28e922e3b6365184b1da3448ddc40ddf4fa9a17b5760d1b9bd65da6456e4c"
+        },
+        {
+          "file": "P11.svg",
+          "sha256": "65c0af10e8cea4ead8669b19e07801c78e5dc1f1834979dcdaf5ac84d3e0b094"
+        },
+        {
+          "file": "P12.svg",
+          "sha256": "785b8b13993ef79d93ff86b3e041d293f53a6e7aebb37ebc0e4fbd43032e8f0f"
+        },
+        {
+          "file": "P13.svg",
+          "sha256": "be9373afa28a4a356de02f7a8d43dfcfdbb251ab8c8a7a0dcdd9c6586fab7097"
+        },
+        {
+          "file": "P14.svg",
+          "sha256": "2a5f1c1e33ebb4cec6040b4d56088a29e5f080fe78cfeb74cd30eedee04edd4b"
+        }
+      ]
+    },
+    "authoring_roundtrip": null
+  },
+  "package": {
+    "zip_integrity": "passed",
+    "corrupt_member": null,
+    "slides": 14,
+    "notes": 0,
+    "masters": 1,
+    "layouts": 1
+  },
+  "checks": {
+    "zip_integrity": "passed",
+    "slide_count": "passed",
+    "internal_relationships": "enforced-at-build",
+    "structured_package": "not-applicable",
+    "transitions": "enforced-at-build",
+    "animations": "enforced-at-build",
+    "project_svg_contract": "enforced-at-build",
+    "compatibility_normalization": "not-applicable",
+    "authoring_roundtrip": "not-applicable",
+    "quality_gate": "passed",
+    "quality_warnings": "passed",
+    "template_tokens": "passed",
+    "external_images": "passed",
+    "font_portability": "passed"
+  },
+  "quality": {
+    "status": "loaded",
+    "path": "/home/user/Light-skills/projects/amp-ad-mechanism/ppt/validation/svg_quality_report.json",
+    "schema": "ppt-master.svg-quality-report.v1",
+    "stage": "final",
+    "source_match": "passed",
+    "source_fingerprint": {
+      "algorithm": "sha256",
+      "digest": "38d4ddf50409c4c64855f7b8fabd03669dcca65b65ff2d95a344a472646003a8",
+      "file_count": 14,
+      "files": [
+        {
+          "file": "P01.svg",
+          "sha256": "eeb118f73a06160f669a23da4f0c0964dfaf9ec7f1c1cd8a0a20a30c960bbcc9"
+        },
+        {
+          "file": "P02.svg",
+          "sha256": "5494f56e779f618d1ea2474f71e0ccbbaca60b22393fe31a7f8240bc4681d875"
+        },
+        {
+          "file": "P03.svg",
+          "sha256": "69d43ab6ee38dd9433f6de4219ce41bfc64cc0f3c5ca30bd60debf8f5c18913d"
+        },
+        {
+          "file": "P04.svg",
+          "sha256": "f3fa76f64ba0aecb75a046000489a7d0492975b6a33a1a9e410c4ab864e6c8a9"
+        },
+        {
+          "file": "P05.svg",
+          "sha256": "ddd3b793f43f248093af4e5d9c7904d3c9fad69bf95de587529c820812b1d314"
+        },
+        {
+          "file": "P06.svg",
+          "sha256": "cd8188414f13c5b861e83ab861e0004a4cb40913ca073df99a3cb43e2d6769b9"
+        },
+        {
+          "file": "P07.svg",
+          "sha256": "45356644735ebc77d7015adf7c5fc0fef469ba558c5baa36ae850f519c27639c"
+        },
+        {
+          "file": "P08.svg",
+          "sha256": "df7a7195158910b94e0e8650bc307e39f70e29238e94d8d17aaa140534c5eea0"
+        },
+        {
+          "file": "P09.svg",
+          "sha256": "549ab4bdaefd0d21310562fac6f08a8926109b4f59164dbff2ce85244333c287"
+        },
+        {
+          "file": "P10.svg",
+          "sha256": "07b28e922e3b6365184b1da3448ddc40ddf4fa9a17b5760d1b9bd65da6456e4c"
+        },
+        {
+          "file": "P11.svg",
+          "sha256": "65c0af10e8cea4ead8669b19e07801c78e5dc1f1834979dcdaf5ac84d3e0b094"
+        },
+        {
+          "file": "P12.svg",
+          "sha256": "785b8b13993ef79d93ff86b3e041d293f53a6e7aebb37ebc0e4fbd43032e8f0f"
+        },
+        {
+          "file": "P13.svg",
+          "sha256": "be9373afa28a4a356de02f7a8d43dfcfdbb251ab8c8a7a0dcdd9c6586fab7097"
+        },
+        {
+          "file": "P14.svg",
+          "sha256": "2a5f1c1e33ebb4cec6040b4d56088a29e5f080fe78cfeb74cd30eedee04edd4b"
+        }
+      ]
+    },
+    "summary": {
+      "total": 14,
+      "passed": 14,
+      "warnings": 0,
+      "errors": 0
+    },
+    "categories": {
+      "blocking": {
+        "count": 0,
+        "issues": []
+      },
+      "introduced": {
+        "count": 0,
+        "issues": []
+      },
+      "inherited": {
+        "count": 0,
+        "issues": []
+      },
+      "source-import": {
+        "count": 0,
+        "summary": {
+          "warning_count": 0,
+          "by_code": {}
+        }
+      }
+    }
+  },
+  "resources": {
+    "unresolved_template_tokens": [],
+    "fonts": {
+      "stacks": [
+        "Microsoft YaHei"
+      ],
+      "generic_only_stacks": [],
+      "unsafe_exported_faces": []
+    },
+    "images": {
+      "data_uri": 0,
+      "local": 0,
+      "external": 0,
+      "external_references": []
+    }
+  },
+  "export_policy": {
+    "project_svg_contract": "strict",
+    "dangerous_normalization_count": 0
+  },
+  "deck_motion": {
+    "transition": {
+      "effect": "fade",
+      "effect_options": {},
+      "duration": 0.4,
+      "auto_advance": null,
+      "sound": null
+    },
+    "animation": {
+      "effect": "none",
+      "effect_request": null,
+      "duration": 0.4,
+      "stagger": 0.5,
+      "trigger": "after-previous"
+    },
+    "cli_overrides": {
+      "transition": false,
+      "transition_duration": false,
+      "auto_advance": false,
+      "transition_sound": false,
+      "animation": false,
+      "animation_duration": false,
+      "animation_stagger": false,
+      "animation_trigger": false
+    },
+    "narration_timings": false
+  },
+  "backup_path": null,
+  "conversion_trace_path": null
+}

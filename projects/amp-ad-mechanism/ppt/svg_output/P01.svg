@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" lang="zh-CN" font-family="Microsoft YaHei" data-pptx-page-role="content">
+  <rect id="page-bg" x="0" y="0" width="1600" height="900" fill="#0E1A2B" data-pptx-role="background"/>
+  <g id="cover" data-pptx-bounds="0 60 1400 760">
+    <rect x="0" y="0" width="14" height="900" fill="#E0A458"/>
+    <text x="130" y="330" font-size="30" fill="#9FB3CF">抗菌肽 × 阿尔茨海默病</text>
+    <text x="130" y="430" font-size="62" fill="#F2F6FA" font-weight="bold">八个机制落点与计算方案</text>
+    <rect x="130" y="478" width="180" height="6" fill="#E0A458"/>
+    <text x="130" y="560" font-size="26" fill="#9FB3CF">肠道宏基因组来源抗菌肽 · 对接与分子动力学 · 暴露路径判别</text>
+    <text x="130" y="770" font-size="22" fill="#9FB3CF">姓名：　　　　　　指导教师：</text>
+  </g>
+</svg>

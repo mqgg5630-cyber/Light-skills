@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" lang="zh-CN" font-family="Microsoft YaHei" data-pptx-page-role="content">
+  <rect id="page-bg" x="0" y="0" width="1600" height="900" fill="#0E1A2B" data-pptx-role="background"/>
+  <g id="routes" data-pptx-bounds="100 60 1400 800">
+    <text x="110" y="120" font-size="44" fill="#F2F6FA" font-weight="bold">肠道来源要不要过血脑屏障</text>
+    <rect x="110" y="148" width="120" height="5" fill="#E0A458"/>
+    <rect x="110" y="220" width="1380" height="150" fill="#15283F"/>
+    <rect x="110" y="220" width="8" height="150" fill="#C9705B"/>
+    <text x="150" y="274" font-size="28" fill="#C9705B" font-weight="bold">R1　跨屏障入脑</text>
+    <text x="150" y="320" font-size="22" fill="#F2F6FA">
+    <tspan x="150" dy="0">吸收入血后经被动扩散或受体介导转胞吞进入脑实质，在脑间质达到可作用的游离浓度。最苛刻的一条。</tspan>
+    </text>
+    <rect x="110" y="396" width="1380" height="150" fill="#15283F"/>
+    <rect x="110" y="396" width="8" height="150" fill="#5BA6A8"/>
+    <text x="150" y="450" font-size="28" fill="#5BA6A8" font-weight="bold">R2　肠道就地起效</text>
+    <text x="150" y="496" font-size="22" fill="#F2F6FA">
+    <tspan x="150" dy="0">肠腔浓度可到微摩尔以上，作用于菌群、细菌功能性淀粉样蛋白、肠上皮与肠神经系统，经迷走和免疫把信号送到中枢。</tspan>
+    </text>
+    <rect x="110" y="572" width="1380" height="150" fill="#15283F"/>
+    <rect x="110" y="572" width="8" height="150" fill="#E0A458"/>
+    <text x="150" y="626" font-size="28" fill="#E0A458" font-weight="bold">R3　入血不入脑</text>
+    <text x="150" y="672" font-size="22" fill="#F2F6FA">
+    <tspan x="150" dy="0">改变外周对 Aβ 的结合与清除（TTR、白蛋白、单核巨噬），或影响 Aβ 跨屏障的净通量。</tspan>
+    </text>
+    <text x="110" y="800" font-size="23" fill="#F2F6FA">
+    <tspan x="110" dy="0">主线放 R2 与 R3。细菌源肽多为十几到几十个残基、净正电荷高，被动过屏障效率低；能过屏障的肽偏小、偏疏水、弱阳离子，</tspan>
+    <tspan x="110" dy="38">和一般穿膜肽不是一回事。</tspan>
+    </text>
+  </g>
+</svg>

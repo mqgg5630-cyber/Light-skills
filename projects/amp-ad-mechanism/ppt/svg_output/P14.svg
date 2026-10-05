@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" lang="zh-CN" font-family="Microsoft YaHei" data-pptx-page-role="content">
+  <rect id="page-bg" x="0" y="0" width="1600" height="900" fill="#0E1A2B" data-pptx-role="background"/>
+  <g id="plan" data-pptx-bounds="100 60 1400 800">
+    <text x="110" y="120" font-size="44" fill="#F2F6FA" font-weight="bold">先做什么</text>
+    <rect x="110" y="148" width="120" height="5" fill="#E0A458"/>
+    <rect x="110" y="230" width="1380" height="160" fill="#15283F"/>
+    <rect x="110" y="230" width="8" height="160" fill="#E0A458"/>
+    <text x="150" y="288" font-size="28" fill="#E0A458" font-weight="bold">第一批</text>
+    <text x="150" y="338" font-size="22" fill="#F2F6FA">
+    <tspan x="150" dy="0">肠道端（M8）和外周清除竞争（M6）。不依赖跨屏障假设，风险最低，也最能说明肠道来源这个出身的意义。</tspan>
+    </text>
+    <rect x="110" y="416" width="1380" height="160" fill="#15283F"/>
+    <rect x="110" y="416" width="8" height="160" fill="#5BA6A8"/>
+    <text x="150" y="474" font-size="28" fill="#5BA6A8" font-weight="bold">第二批</text>
+    <text x="150" y="524" font-size="22" fill="#F2F6FA">
+    <tspan x="150" dy="0">AChE 三元体系（M1）和交叉成核的方向判据（M2）。已经动手的部分，补上三元、双力场和 ThT 全局拟合。</tspan>
+    </text>
+    <rect x="110" y="602" width="1380" height="160" fill="#15283F"/>
+    <rect x="110" y="602" width="8" height="160" fill="#C9705B"/>
+    <text x="150" y="660" font-size="28" fill="#C9705B" font-weight="bold">第三批</text>
+    <text x="150" y="710" font-size="22" fill="#F2F6FA">
+    <tspan x="150" dy="0">受体层（M4）需要膜体系和细胞实验配合，周期长；膜界面（M5）、自淀粉样化（M7）、tau（M3）视前两批结果展开。</tspan>
+    </text>
+    <text x="110" y="828" font-size="22" fill="#9FB3CF">跨屏障那条路径，在稳定性和降解片段谱的数据出来之前按条件分支处理，不写进主线结论。</text>
+  </g>
+</svg>

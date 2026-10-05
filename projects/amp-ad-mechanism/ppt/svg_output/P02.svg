@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" lang="zh-CN" font-family="Microsoft YaHei" data-pptx-page-role="content">
+  <rect id="page-bg" x="0" y="0" width="1600" height="900" fill="#0E1A2B" data-pptx-role="background"/>
+  <g id="overview" data-pptx-bounds="100 60 1400 800">
+    <text x="110" y="128" font-size="44" fill="#F2F6FA" font-weight="bold">八个落点分布在三个隔室</text>
+    <rect x="110" y="156" width="120" height="5" fill="#E0A458"/>
+    <rect x="110" y="220" width="440" height="560" fill="#15283F"/>
+    <rect x="110" y="220" width="440" height="8" fill="#5BA6A8"/>
+    <text x="146" y="300" font-size="30" fill="#5BA6A8" font-weight="bold">肠腔与肠上皮</text>
+    <text x="146" y="365" font-size="21" fill="#F2F6FA">
+    <tspan x="146" dy="0">M8a　与细菌功能性淀粉样蛋白 CsgA、F</tspan>
+    <tspan x="146" dy="32">apC 的组装界面</tspan>
+    </text>
+    <text x="146" y="453" font-size="21" fill="#F2F6FA">
+    <tspan x="146" dy="0">M8b　菌群重塑与 LPS、短链脂肪酸的变</tspan>
+    <tspan x="146" dy="32">化</tspan>
+    </text>
+    <text x="146" y="541" font-size="21" fill="#F2F6FA">
+    <tspan x="146" dy="0">M7　抗菌肽自身形成淀粉样种子</tspan>
+    </text>
+    <rect x="580" y="220" width="440" height="560" fill="#15283F"/>
+    <rect x="580" y="220" width="440" height="8" fill="#E0A458"/>
+    <text x="616" y="300" font-size="30" fill="#E0A458" font-weight="bold">循环与屏障</text>
+    <text x="616" y="365" font-size="21" fill="#F2F6FA">
+    <tspan x="616" dy="0">M6　与 Aβ 争夺 IDE、NEP 的催化腔</tspan>
+    </text>
+    <text x="616" y="421" font-size="21" fill="#F2F6FA">
+    <tspan x="616" dy="0">外周沉降槽：TTR、白蛋白的结合面重叠</tspan>
+    </text>
+    <text x="616" y="477" font-size="21" fill="#F2F6FA">
+    <tspan x="616" dy="0">跨屏障入脑作为条件分支</tspan>
+    </text>
+    <rect x="1050" y="220" width="440" height="560" fill="#15283F"/>
+    <rect x="1050" y="220" width="440" height="8" fill="#C9705B"/>
+    <text x="1086" y="300" font-size="30" fill="#C9705B" font-weight="bold">脑实质</text>
+    <text x="1086" y="365" font-size="21" fill="#F2F6FA">
+    <tspan x="1086" dy="0">M1　AChE 的 PAS 上的三元复合物</tspan>
+    </text>
+    <text x="1086" y="421" font-size="21" fill="#F2F6FA">
+    <tspan x="1086" dy="0">M2　与 Aβ 的交叉成核及其方向</tspan>
+    </text>
+    <text x="1086" y="477" font-size="21" fill="#F2F6FA">
+    <tspan x="1086" dy="0">M4　FPR2、CLIC1、TLR4、RAGE</tspan>
+    </text>
+    <text x="1086" y="533" font-size="21" fill="#F2F6FA">
+    <tspan x="1086" dy="0">M5　含 GM1 的神经元膜界面</tspan>
+    </text>
+    <text x="1086" y="589" font-size="21" fill="#F2F6FA">
+    <tspan x="1086" dy="0">M3　tau 的 PHF6（可选）</tspan>
+    </text>
+    <text x="110" y="838" font-size="20" fill="#9FB3CF">肠道端与外周端不依赖跨血脑屏障的假设，脑实质一侧按条件分支处理</text>
+  </g>
+</svg>

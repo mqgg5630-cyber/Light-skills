@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" lang="zh-CN" font-family="Microsoft YaHei" data-pptx-page-role="content">
+  <rect id="page-bg" x="0" y="0" width="1600" height="900" fill="#0E1A2B" data-pptx-role="background"/>
+  <g id="mechanism" data-pptx-bounds="0 0 1600 870">
+    <rect x="0" y="0" width="1600" height="170" fill="#15283F"/>
+    <rect x="0" y="162" width="1600" height="8" fill="#E0A458" fill-opacity="0.5"/>
+    <text x="110" y="82" font-size="24" fill="#E0A458">机制 7</text>
+    <text x="110" y="134" font-size="42" fill="#F2F6FA" font-weight="bold">抗菌肽自己的淀粉样化</text>
+    <rect x="110" y="234" width="6" height="48" fill="#E0A458"/>
+    <text x="140" y="270" font-size="27" fill="#E0A458" font-weight="bold">假设</text>
+    <text x="244" y="270" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">候选肽先在肠腔或循环里形成种子，再以种子而不是单体的形式参与宿主蛋白的异质成核。</tspan>
+    </text>
+    <rect x="110" y="406" width="6" height="48" fill="#5BA6A8"/>
+    <text x="140" y="442" font-size="27" fill="#5BA6A8" font-weight="bold">做法</text>
+    <text x="244" y="442" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">聚集倾向预测找热点，枚举 steric zipper，对最优的跑几百纳秒稳定性模拟看剥离功和氢键网络，再</tspan>
+    <tspan x="244" dy="40">把稳定 zipper 当种子面算 Aβ 的结合与伸长自由能。</tspan>
+    </text>
+    <rect x="110" y="618" width="6" height="48" fill="#C9705B"/>
+    <text x="140" y="654" font-size="27" fill="#C9705B" font-weight="bold">判据</text>
+    <text x="244" y="654" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">zipper 剥离功；种子面对 Aβ 的伸长自由能是否显著为负。</tspan>
+    </text>
+    <rect x="110" y="776" width="1380" height="2" fill="#9FB3CF" fill-opacity="0.5"/>
+    <text x="110" y="824" font-size="20" fill="#9FB3CF">
+    <tspan x="110" dy="0">uperin 3.5 在无脂时成 cross-β、遇膜脂转 cross-α；LL-37 的 17–29 片段能自组装成功能性纤维。</tspan>
+    </text>
+  </g>
+</svg>

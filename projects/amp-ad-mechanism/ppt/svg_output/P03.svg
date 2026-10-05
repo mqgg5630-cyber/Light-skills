@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" lang="zh-CN" font-family="Microsoft YaHei" data-pptx-page-role="content">
+  <rect id="page-bg" x="0" y="0" width="1600" height="900" fill="#0E1A2B" data-pptx-role="background"/>
+  <g id="mechanism" data-pptx-bounds="0 0 1600 870">
+    <rect x="0" y="0" width="1600" height="170" fill="#15283F"/>
+    <rect x="0" y="162" width="1600" height="8" fill="#E0A458" fill-opacity="0.5"/>
+    <text x="110" y="82" font-size="24" fill="#E0A458">机制 1</text>
+    <text x="110" y="134" font-size="42" fill="#F2F6FA" font-weight="bold">AChE 的 PAS 上的三元复合物</text>
+    <rect x="110" y="234" width="6" height="48" fill="#E0A458"/>
+    <text x="140" y="270" font-size="27" fill="#E0A458" font-weight="bold">假设</text>
+    <text x="244" y="270" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">抗菌肽在 344—361 疏水区和 PAS 邻域占位，要么替掉 Aβ 减少模板表面，要么夹成 AChE–抗菌肽</tspan>
+    <tspan x="244" dy="40">–Aβ 三层把 Aβ 拉得更近。</tspan>
+    </text>
+    <rect x="110" y="446" width="6" height="48" fill="#5BA6A8"/>
+    <text x="140" y="482" font-size="27" fill="#5BA6A8" font-weight="bold">做法</text>
+    <text x="244" y="482" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">以 Tyr72、Asp74、Tyr124、Trp286、Tyr341 和 344—361 为活性残基做数据驱动对接；二元与三元</tspan>
+    <tspan x="244" dy="40">体系各三条 1 μs，和已有的 AChE–Aβ 体系并排当内参。</tspan>
+    </text>
+    <rect x="110" y="658" width="6" height="48" fill="#C9705B"/>
+    <text x="140" y="694" font-size="27" fill="#C9705B" font-weight="bold">判据</text>
+    <text x="244" y="694" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">界面接触占据率、停留区段与 344—361 的重合比例、Aβ 占据 PAS 的概率变化。</tspan>
+    </text>
+    <rect x="110" y="776" width="1380" height="2" fill="#9FB3CF" fill-opacity="0.5"/>
+    <text x="110" y="824" font-size="20" fill="#9FB3CF">
+    <tspan x="110" dy="0">对照：已知只结合催化位点的小分子；湿实验用 AChE 促聚集的 ThT 曲线和 SPR。</tspan>
+    </text>
+  </g>
+</svg>

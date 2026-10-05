@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" lang="zh-CN" font-family="Microsoft YaHei" data-pptx-page-role="content">
+  <rect id="page-bg" x="0" y="0" width="1600" height="900" fill="#0E1A2B" data-pptx-role="background"/>
+  <g id="conditions" data-pptx-bounds="100 60 1400 800">
+    <text x="110" y="120" font-size="44" fill="#F2F6FA" font-weight="bold">要主张能入脑，四条同时满足</text>
+    <rect x="110" y="148" width="120" height="5" fill="#E0A458"/>
+    <rect x="110" y="230" width="650" height="210" fill="#15283F"/>
+    <text x="150" y="300" font-size="30" fill="#E0A458" font-weight="bold">序列</text>
+    <text x="150" y="355" font-size="22" fill="#F2F6FA">
+    <tspan x="150" dy="0">血脑屏障穿透预测为阳性，不只依赖一个模型，报概率而不</tspan>
+    <tspan x="150" dy="36">是只给标签</tspan>
+    </text>
+    <rect x="810" y="230" width="650" height="210" fill="#15283F"/>
+    <text x="850" y="300" font-size="30" fill="#E0A458" font-weight="bold">物理</text>
+    <text x="850" y="355" font-size="22" fill="#F2F6FA">
+    <tspan x="850" dy="0">跨膜自由能垒在可跨越范围，或能指出受体介导转胞吞的结</tspan>
+    <tspan x="850" dy="36">合面</tspan>
+    </text>
+    <rect x="110" y="480" width="650" height="210" fill="#15283F"/>
+    <text x="150" y="550" font-size="30" fill="#E0A458" font-weight="bold">药代</text>
+    <text x="150" y="605" font-size="22" fill="#F2F6FA">
+    <tspan x="150" dy="0">房室模型给出的脑间质游离浓度不低于目标结合常数的十分</tspan>
+    <tspan x="150" dy="36">之一</tspan>
+    </text>
+    <rect x="810" y="480" width="650" height="210" fill="#15283F"/>
+    <text x="850" y="550" font-size="30" fill="#E0A458" font-weight="bold">实测</text>
+    <text x="850" y="605" font-size="22" fill="#F2F6FA">
+    <tspan x="850" dy="0">脑组织里用质谱检出完整肽，而不是降解片段或只看荧光标</tspan>
+    <tspan x="850" dy="36">记</tspan>
+    </text>
+    <text x="110" y="800" font-size="23" fill="#F2F6FA">四条里缺一条，机制主线就放回肠道端和外周端。脑内 Aβ 稳态本来就受外周清除和系统炎症调控。</text>
+    <text x="110" y="844" font-size="22" fill="#9FB3CF">配套做一件便宜的事：候选肽在模拟肠液与血浆里的稳定性和降解片段谱。片段若变短变疏水，入脑的可能性上升。</text>
+  </g>
+</svg>

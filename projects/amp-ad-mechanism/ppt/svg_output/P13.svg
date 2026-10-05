@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" lang="zh-CN" font-family="Microsoft YaHei" data-pptx-page-role="content">
+  <rect id="page-bg" x="0" y="0" width="1600" height="900" fill="#0E1A2B" data-pptx-role="background"/>
+  <g id="pipeline" data-pptx-bounds="100 60 1400 800">
+    <text x="110" y="120" font-size="44" fill="#F2F6FA" font-weight="bold">八条共用一套计算流程</text>
+    <rect x="110" y="148" width="120" height="5" fill="#E0A458"/>
+    <rect x="110" y="230" width="258" height="330" fill="#15283F"/>
+    <rect x="110" y="230" width="258" height="7" fill="#E0A458"/>
+    <text x="140" y="305" font-size="30" fill="#F2F6FA" font-weight="bold">分诊</text>
+    <text x="140" y="365" font-size="20" fill="#9FB3CF">
+    <tspan x="140" dy="0">净电荷、疏水矩、聚集倾</tspan>
+    <tspan x="140" dy="32">向、屏障穿透预测，先估</tspan>
+    <tspan x="140" dy="32">各隔室的可及浓度</tspan>
+    </text>
+    <rect x="372" y="392" width="16" height="4" fill="#9FB3CF"/>
+    <rect x="388" y="230" width="258" height="330" fill="#15283F"/>
+    <rect x="388" y="230" width="258" height="7" fill="#5BA6A8"/>
+    <text x="418" y="305" font-size="30" fill="#F2F6FA" font-weight="bold">结构</text>
+    <text x="418" y="365" font-size="20" fill="#9FB3CF">
+    <tspan x="418" dy="0">ESMFold 或 AlphaFold</tspan>
+    <tspan x="418" dy="32">3，保留构象系综，准备</tspan>
+    <tspan x="418" dy="32"> pH 7.4 与 6.0 两套</tspan>
+    </text>
+    <rect x="650" y="392" width="16" height="4" fill="#9FB3CF"/>
+    <rect x="666" y="230" width="258" height="330" fill="#15283F"/>
+    <rect x="666" y="230" width="258" height="7" fill="#E0A458"/>
+    <text x="696" y="305" font-size="30" fill="#F2F6FA" font-weight="bold">对接</text>
+    <text x="696" y="365" font-size="20" fill="#9FB3CF">
+    <tspan x="696" dy="0">HADDOCK 加盲对接，Al</tspan>
+    <tspan x="696" dy="32">phaFold-Multimer 交</tspan>
+    <tspan x="696" dy="32">叉验证，只用来枚举界面</tspan>
+    </text>
+    <rect x="928" y="392" width="16" height="4" fill="#9FB3CF"/>
+    <rect x="944" y="230" width="258" height="330" fill="#15283F"/>
+    <rect x="944" y="230" width="258" height="7" fill="#5BA6A8"/>
+    <text x="974" y="305" font-size="30" fill="#F2F6FA" font-weight="bold">动力学</text>
+    <text x="974" y="365" font-size="20" fill="#9FB3CF">
+    <tspan x="974" dy="0">每个体系三条 1 μs，</tspan>
+    <tspan x="974" dy="32">膜体系先 Martini 3 </tspan>
+    <tspan x="974" dy="32">再回全原子，自由能用伞</tspan>
+    <tspan x="974" dy="32">形采样</tspan>
+    </text>
+    <rect x="1206" y="392" width="16" height="4" fill="#9FB3CF"/>
+    <rect x="1222" y="230" width="258" height="330" fill="#15283F"/>
+    <rect x="1222" y="230" width="258" height="7" fill="#E0A458"/>
+    <text x="1252" y="305" font-size="30" fill="#F2F6FA" font-weight="bold">对照</text>
+    <text x="1252" y="365" font-size="20" fill="#9FB3CF">
+    <tspan x="1252" dy="0">打乱序列、等长等电荷、</tspan>
+    <tspan x="1252" dy="32">同源无活性三类肽同流程</tspan>
+    <tspan x="1252" dy="32">同时长</tspan>
+    </text>
+    <text x="110" y="650" font-size="26" fill="#E0A458" font-weight="bold">判稳与判向</text>
+    <text x="110" y="700" font-size="23" fill="#F2F6FA">最后 500 ns 的界面接触占据率不低于六成，且至少两条副本一致。</text>
+    <text x="110" y="742" font-size="23" fill="#F2F6FA">方向在开跑前写定：伸长自由能的符号加二次成核速率，决定判为加速、改形还是无效应。</text>
+    <text x="110" y="784" font-size="23" fill="#F2F6FA">β 含量对力场敏感，CHARMM36m 与 a99SB-disp 两套都跑，只采信一致的结论。</text>
+  </g>
+</svg>

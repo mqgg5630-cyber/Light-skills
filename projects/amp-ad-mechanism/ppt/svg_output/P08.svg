@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" lang="zh-CN" font-family="Microsoft YaHei" data-pptx-page-role="content">
+  <rect id="page-bg" x="0" y="0" width="1600" height="900" fill="#0E1A2B" data-pptx-role="background"/>
+  <g id="mechanism" data-pptx-bounds="0 0 1600 870">
+    <rect x="0" y="0" width="1600" height="170" fill="#15283F"/>
+    <rect x="0" y="162" width="1600" height="8" fill="#E0A458" fill-opacity="0.5"/>
+    <text x="110" y="82" font-size="24" fill="#E0A458">机制 6</text>
+    <text x="110" y="134" font-size="42" fill="#F2F6FA" font-weight="bold">Aβ 清除通路里的竞争</text>
+    <rect x="110" y="234" width="6" height="48" fill="#E0A458"/>
+    <text x="140" y="270" font-size="27" fill="#E0A458" font-weight="bold">假设</text>
+    <text x="244" y="270" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">候选肽占住 IDE、NEP 的催化腔，或者占住外周沉降槽的结合面，不进脑也能把脑内 Aβ 负荷抬上去</tspan>
+    <tspan x="244" dy="40">。</tspan>
+    </text>
+    <rect x="110" y="446" width="6" height="48" fill="#5BA6A8"/>
+    <text x="140" y="482" font-size="27" fill="#5BA6A8" font-weight="bold">做法</text>
+    <text x="244" y="482" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">候选肽与 Aβ 分别对接进 IDE 封闭催化腔并跑 MD，比停留时间和腔口闭合；用竞争模型换算成降解</tspan>
+    <tspan x="244" dy="40">速率的相对下降；再看与 TTR、白蛋白的结合面是否与 Aβ 的重叠。</tspan>
+    </text>
+    <rect x="110" y="658" width="6" height="48" fill="#C9705B"/>
+    <text x="140" y="694" font-size="27" fill="#C9705B" font-weight="bold">判据</text>
+    <text x="244" y="694" font-size="23" fill="#F2F6FA">
+    <tspan x="244" dy="0">占位时间比、相对抑制常数排序、外周 Aβ 结合竞争实验。</tspan>
+    </text>
+    <rect x="110" y="776" width="1380" height="2" fill="#9FB3CF" fill-opacity="0.5"/>
+    <text x="110" y="824" font-size="20" fill="#9FB3CF">
+    <tspan x="110" dy="0">胰岛素竞争拖慢 Aβ 降解是现成的先例。</tspan>
+    </text>
+  </g>
+</svg>
