@@ -5,7 +5,7 @@
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
   "total_files": 256,
-  "total_bytes": 122880428,
+  "total_bytes": 122353422,
   "by_top_level_group": {
     "docking": {
       "files": 5,
@@ -17,7 +17,7 @@
     },
     "manuscript": {
       "files": 72,
-      "bytes": 110317787
+      "bytes": 109790781
     },
     "project_root": {
       "files": 4,
@@ -60,7 +60,7 @@
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
       "size_bytes": 23253,
-      "sha256": "735fa8a36ff022d56c4dea63f7ea739cf1317077229553e36cb851a2fc81d92c"
+      "sha256": "886d4eef32d0a4021d0587b01cdbec62cd85633d53a1df3600ac25984fd63521"
     },
     {
       "path": "README.md",
@@ -234,13 +234,13 @@
     },
     {
       "path": "manuscript/figures/fig5_docking_scores.png",
-      "size_bytes": 325157,
-      "sha256": "78b36ba0b6b5fa2d5ae3a9414f8fdfad04b3c9618297d71212ad6752ce2c4609"
+      "size_bytes": 204731,
+      "sha256": "030b03854be0474074df4cf85c0eaefe1898fe0dfb7945638be7e0651660ba99"
     },
     {
       "path": "manuscript/figures/fig5_docking_scores.svg",
-      "size_bytes": 79520,
-      "sha256": "ba824431d7beee4b94d6e39ca67bbbfb2acc9b6dfab509b6fdcfcc0726c8cf41"
+      "size_bytes": 43986,
+      "sha256": "d90e68334db8072e8a3416aa0e8eb99b41816e6988afd4a510a4fc505b6bfbeb"
     },
     {
       "path": "manuscript/figures/fig_compare_ache_vs_alllhrc.pdf",
@@ -319,13 +319,13 @@
     },
     {
       "path": "manuscript/figures/fig_screening_cascade.png",
-      "size_bytes": 266306,
-      "sha256": "6d8099680909f6dbfab7417ef53c245552238b1f918f80e1ed2880d67abd046e"
+      "size_bytes": 212886,
+      "sha256": "6153bf7ca240f81389609c1c8e32f33bfcf57f62354950f1c3cdca4bd18e1adb"
     },
     {
       "path": "manuscript/figures/fig_screening_cascade.svg",
-      "size_bytes": 69765,
-      "sha256": "9abd2a61d8fe15d576278cd2862001f1b6d20e88d83e7c943ce69b86a63bb422"
+      "size_bytes": 56917,
+      "sha256": "fa38233df3f4b3a99f402fa5f025802b6d227f84486ba23eb3ebf0b7b281adf4"
     },
     {
       "path": "manuscript/figures/prioritization_funnel.png",
@@ -519,8 +519,8 @@
     },
     {
       "path": "manuscript/sci_submission/Chinese.docx",
-      "size_bytes": 7363495,
-      "sha256": "20292b087c5d4a8f2c96e3659694338e278466538d4fb0c2d562140dfc12cc33"
+      "size_bytes": 7211106,
+      "sha256": "e3a99a7ee5fb67208232afdc34256d94b934bf6e7b725028ac85f7908ab091dd"
     },
     {
       "path": "manuscript/sci_submission/Chinese.md",
@@ -529,8 +529,8 @@
     },
     {
       "path": "manuscript/sci_submission/English.docx",
-      "size_bytes": 7363193,
-      "sha256": "3558626762bd6a43543af513536f50b95b4623b916d7070b9236ed6992eecc1c"
+      "size_bytes": 7210804,
+      "sha256": "125e266a8f3f6dbf205d89432b066a49c109abfadb9c6e0c7ebe034b33273de4"
     },
     {
       "path": "manuscript/sci_submission/English.md",
