@@ -1,9 +1,9 @@
 {
-  "round": 274,
-  "arena_state": "pending",
-  "local_state": "awaiting_check",
-  "host": "LAPTOP-R77M5D6M",
-  "note": "deliver Alligator Gut AMP SCI Manuscript (portrait body/figures, landscape tables, 300 DPI PyMOL figures embedded) to desktop",
-  "arena_updated": "2026-10-07 10:58:00",
-  "local_updated": "2026-10-07 16:00:20"
+  "round": 275,
+  "arena_state": "awaiting_check",
+  "local_state": "pending",
+  "host": "",
+  "note": "deliver Alligator Gut AMP SCI Manuscript to local desktop and verify",
+  "arena_updated": "2026-10-07 11:17:53",
+  "local_updated": null
 }
