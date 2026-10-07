@@ -1,7 +1,0 @@
-OK       材料与方法及结果_机制研究版.docx
-OK       材料与方法及结果_机制研究版.pdf
-OK       牙龈卟啉单胞菌肽与AD关联综述.docx
-OK       乙酰胆碱酯酶-β-淀粉样肽复合物分子动力学模拟_中文翻译.docx
-OK       md_alllhrc/digitized_rmsd_100ns.csv
-OK       md_alllhrc/peptide_rmsd_jump_diagnosis.txt
-verified=6 total=6 failures=0

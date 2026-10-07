@@ -1,9 +1,0 @@
-{
-  "schema": "local.manuscript_word_count.v1",
-  "source": "manuscript/manuscript_en.md",
-  "structured_abstract_excluding_keywords": 344,
-  "main_text_introduction_through_conclusions": 5120,
-  "main_text_including_declarations_excluding_references": 5450,
-  "counting_boundary": "Journal-neutral regex estimate: alphabetic compounds and formatted numbers count as one token; Markdown image declarations are excluded. Recount after target-journal formatting in Word and the submission portal.",
-  "verdict": "INFORMATIONAL"
-}

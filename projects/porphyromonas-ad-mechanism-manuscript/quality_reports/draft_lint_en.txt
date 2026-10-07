@@ -1,6 +1,0 @@
-draft_lint_en: PASS
-- mode: final
-- required_boundary_phrases_present: {'source-reported': True, 'not independently reproduced': True, 'FLLHTTR': True, 'PDB 4EY6': True}
-- prohibited_assertion_hits: []
-- reference_entries: 53
-- top_level_sections: 8

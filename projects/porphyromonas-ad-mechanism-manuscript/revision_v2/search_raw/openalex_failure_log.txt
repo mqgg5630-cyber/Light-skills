@@ -1,9 +1,0 @@
-Run date: 2026-08-12
-Tool: nature-academic-search scripts/academic_search.py (OpenAlex no-MCP fallback)
-Queries attempted:
-1. oral microbiome small open reading frames micropeptides
-2. periodontitis metagenomics metatranscriptomics metaproteomics peptides
-3. blood brain barrier penetrating peptide prediction neurotoxicity metal binding
-4. periodontitis Alzheimer disease systematic review Mendelian randomization
-Outcome: all four calls failed before result retrieval with TLS/SSL connection closed (EOF). No records were accepted from these runs.
-Fallback: bounded web search and direct publisher/PubMed/PMC/DOI verification. This is not represented as exhaustive database coverage.

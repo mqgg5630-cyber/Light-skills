@@ -1,69 +1,55 @@
 {
-  "generated_utc": "2026-09-16T11:31:33Z",
-  "generator": "code/make_link_proof.py",
-  "generator_note": "python-docx + python-pptx (allowed in the sandbox since v2.8.0); the manifest is the contract the REAL machine verifies in code/local_check.ps1 section 3, and the same 3a-3g rules are mirrored in Python here so a package that cannot pass is never pushed",
-  "branch": "arena/01a0a9f0-git-pull-arena",
+  "generated_utc": "2026-10-07T10:55:00Z",
+  "generator": "code/tasks/build_amp_full_manuscript.py",
+  "generator_note": "python-docx AMP SCI Manuscript and Method Supplement deliverables",
+  "branch": "arena/ae80330d-light-skills",
   "skill_version": "2.8.1",
-  "how_local_verifies": "code/local_check.ps1 compares sha256/bytes, opens the package, requires every required_parts entry, parses every .xml/.rels part, resolves every relationship target and content type, searches must_contain across all xml parts and counts slides against min_slides; the Office COM open test (3h) runs on the real machine",
   "files": [
     {
-      "path": "deliverable/LINK_PROOF_v2.8.1.docx",
+      "path": "deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx",
       "kind": "docx",
-      "bytes": 39743,
-      "sha256": "8637d9f0442e80a0a1480612de053335c1ade4b7c7434c286d48fac248bb7163",
+      "bytes": 6955486,
+      "sha256": "afa155f661f84d1c8e57968556b7dade448ec29e0520bdbd03901310f9dd127b",
       "required_parts": [
         "[Content_Types].xml",
         "_rels/.rels",
         "word/document.xml",
         "word/styles.xml",
-        "word/_rels/document.xml.rels",
-        "docProps/core.xml"
+        "word/_rels/document.xml.rels"
       ],
       "main_part": "word/document.xml",
       "must_contain": [
-        "2.8.1",
-        "git-sync",
-        "local_check.ps1",
-        "round 20",
-        "LAPTOP-R77M5D6M",
-        "arena/01a0a9f0-git-pull-arena"
+        "Escherichia coli",
+        "Staphylococcus aureus",
+        "FtsZ",
+        "pep_018",
+        "pep_029",
+        "pep_037"
       ],
-      "min_slides": null,
-      "sandbox_selftest": {
-        "parts": 17,
-        "slides": 0
-      }
+      "min_slides": null
     },
     {
-      "path": "deliverable/LINK_PROOF_v2.8.1.pptx",
-      "kind": "pptx",
-      "bytes": 35886,
-      "sha256": "4aee7b2f88aa9e2e04de044d1a75dc209c2f67bd0b1c284af7ca73eef36dd25d",
+      "path": "deliverable/method_with_docking_20261007_1600.docx",
+      "kind": "docx",
+      "bytes": 7042890,
+      "sha256": "97997ed8d238cbac0805be250bff3c7dad3b36293fc56933a735e85b4dc056c4",
       "required_parts": [
         "[Content_Types].xml",
         "_rels/.rels",
-        "ppt/presentation.xml",
-        "ppt/_rels/presentation.xml.rels",
-        "ppt/slides/slide1.xml",
-        "ppt/slideMasters/slideMaster1.xml",
-        "ppt/slideLayouts/slideLayout1.xml",
-        "ppt/theme/theme1.xml",
-        "docProps/core.xml"
+        "word/document.xml",
+        "word/styles.xml",
+        "word/_rels/document.xml.rels"
       ],
-      "main_part": "ppt/presentation.xml",
+      "main_part": "word/document.xml",
       "must_contain": [
-        "2.8.1",
-        "git-sync",
-        "local_check.ps1",
-        "round 20",
-        "LAPTOP-R77M5D6M",
-        "arena/01a0a9f0-git-pull-arena"
+        "Escherichia coli",
+        "Staphylococcus aureus",
+        "FtsZ",
+        "pep_018",
+        "pep_029",
+        "pep_037"
       ],
-      "min_slides": 8,
-      "sandbox_selftest": {
-        "parts": 52,
-        "slides": 8
-      }
+      "min_slides": null
     }
   ]
 }
