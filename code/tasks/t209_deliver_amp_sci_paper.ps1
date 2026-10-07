@@ -17,7 +17,7 @@ if (-not $desktop) {
 Write-Output "DESKTOP=$desktop"
 
 # 2. Locate User's EXACT SCI Suite Figures
-# D:\桌面\AMP_Docking_Vina_R255_20261005_1552\SCI_Docking_Figure4_Suite\sci_composite_figures
+# User Suite: SCI_Docking_Figure4_Suite/sci_composite_figures
 $userFigSuite = Join-Path $desktop "AMP_Docking_Vina_R255_20261005_1552\SCI_Docking_Figure4_Suite\sci_composite_figures"
 Write-Output "USER_FIG_SUITE=$userFigSuite"
 Write-Output "USER_FIG_SUITE_EXISTS=$(Test-Path -LiteralPath $userFigSuite)"
@@ -79,7 +79,7 @@ foreach ($dest in $destDirs) {
     Write-Output "DELIVERED_TO=$dest"
 }
 
-# 6. Cleanup local disk space per user request ("其余的全删除，只留这个任务的结果，节省空间")
+# 6. Cleanup local disk space per user request
 $oldPeriodontitisFolder = Join-Path $desktop "Periodontitis_AChE_SCI_Paper"
 if (Test-Path -LiteralPath $oldPeriodontitisFolder) {
     try {
@@ -114,12 +114,12 @@ $statusDir = Join-Path $repo "results\status"
 New-Item -ItemType Directory -Force -Path $statusDir | Out-Null
 $reportFile = Join-Path $statusDir "round275_amp_sci_delivery_report.md"
 $lines = @(
-    "# Round 275 Report: Alligator Gut AMP SCI Manuscript Delivery (SCI_Docking_Figure4_Suite)",
+# User Suite: SCI_Docking_Figure4_Suite/sci_composite_figures
     "",
     "- Host: $env:COMPUTERNAME",
     "- Output Folder: $desktop\AMP_SCI_Paper",
     "- Output Folder 2: $desktop\AMP_Docking_Vina_R255_20261005_1552",
-    "- Figure Source: D:\桌面\AMP_Docking_Vina_R255_20261005_1552\SCI_Docking_Figure4_Suite\sci_composite_figures",
+"- Figure Source: Desktop\AMP_Docking_Vina_R255_20261005_1552\SCI_Docking_Figure4_Suite\sci_composite_figures",
     "- Main SCI DOCX: AMP_Alligator_Gut_SCI_Manuscript.docx (" + (Get-Item -LiteralPath $sciDocx).Length + " bytes)",
     "- Supplemented Method DOCX: method_with_docking_20261007_1600.docx (" + (Get-Item -LiteralPath $methodDocx).Length + " bytes)",
     "- Reproduction Guide: AMP_Pipeline_Reproduction_Method.md",
