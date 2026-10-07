@@ -21,7 +21,41 @@ from docx.oxml import parse_xml, OxmlElement
 from docx.oxml.ns import nsdecls, qn
 
 WORKSPACE = "/home/user/Light-skills"
-FIG_DIR = os.path.join(WORKSPACE, "sources/user_amp/figures")
+def find_user_fig_dir():
+    # Priority 1: User's real SCI_Docking_Figure4_Suite on Windows local machine
+    cands = [
+        "D:\桌面\AMP_Docking_Vina_R255_20261005_1552\SCI_Docking_Figure4_Suite\sci_composite_figures",
+        os.path.join(os.environ.get("USERPROFILE", ""), "Desktop", "AMP_Docking_Vina_R255_20261005_1552", "SCI_Docking_Figure4_Suite", "sci_composite_figures"),
+        os.path.join(WORKSPACE, "sources", "user_amp", "figures_user_suite"),
+        os.path.join(WORKSPACE, "sources", "user_amp", "figures"),
+        os.path.join(WORKSPACE, "results", "user_amp", "figure_previews")
+    ]
+    for c in cands:
+        if os.path.isdir(c):
+            f1 = os.path.join(c, "Figure_4_Part1_A-F_300dpi.png")
+            f1_prev = os.path.join(c, "Figure_4_Part1_A-F_300dpi_preview.jpg")
+            if os.path.isfile(f1) or os.path.isfile(f1_prev):
+                print(f"[FIG_DIR] Found user suite at: {c}")
+                return c
+    return os.path.join(WORKSPACE, "sources", "user_amp", "figures")
+
+FIG_DIR = find_user_fig_dir()
+
+def resolve_fig_file(raw_path):
+    # Check if raw_path already exists
+    if os.path.isfile(raw_path):
+        return raw_path
+    base = os.path.basename(raw_path)
+    # Check in FIG_DIR
+    p1 = os.path.join(FIG_DIR, base)
+    if os.path.isfile(p1):
+        return p1
+    # Check in results/user_amp/figure_previews
+    base_no_ext = os.path.splitext(base)[0]
+    p_prev = os.path.join(WORKSPACE, "results", "user_amp", "figure_previews", f"{base_no_ext}_preview.jpg")
+    if os.path.isfile(p_prev):
+        return p_prev
+    return raw_path
 METHOD_SOURCE = os.path.join(WORKSPACE, "sources/user_amp/method (1).docx")
 DELIVERABLE_DIR = os.path.join(WORKSPACE, "deliverable")
 os.makedirs(DELIVERABLE_DIR, exist_ok=True)
@@ -195,6 +229,7 @@ def add_caption(doc, text, is_table=False):
     return p
 
 def add_fig(doc, path, caption, width_cm=16.0):
+    path = resolve_fig_file(path)
     if not os.path.isfile(path):
         add_p(doc, f"[Figure Missing: {os.path.basename(path)}]", color="D63031", align=WD_ALIGN_PARAGRAPH.CENTER)
         return

@@ -1,15 +1,15 @@
 {
-  "generated_utc": "2026-10-07T10:55:00Z",
+  "generated_utc": "2026-10-07T11:28:00Z",
   "generator": "code/tasks/build_amp_full_manuscript.py",
-  "generator_note": "python-docx AMP SCI Manuscript and Method Supplement deliverables",
+  "generator_note": "python-docx AMP SCI Manuscript using SCI_Docking_Figure4_Suite figures",
   "branch": "arena/ae80330d-light-skills",
   "skill_version": "2.8.1",
   "files": [
     {
       "path": "deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx",
       "kind": "docx",
-      "bytes": 6955486,
-      "sha256": "afa155f661f84d1c8e57968556b7dade448ec29e0520bdbd03901310f9dd127b",
+      "bytes": 4915454,
+      "sha256": "6feea3eb4608aa224d51cf66af88d62a1a1ae5514118f349e24b97f711950535",
       "required_parts": [
         "[Content_Types].xml",
         "_rels/.rels",
@@ -31,8 +31,8 @@
     {
       "path": "deliverable/method_with_docking_20261007_1600.docx",
       "kind": "docx",
-      "bytes": 7042890,
-      "sha256": "97997ed8d238cbac0805be250bff3c7dad3b36293fc56933a735e85b4dc056c4",
+      "bytes": 5002859,
+      "sha256": "3e2bb219bd3c7469e5c3cc1d68b5a3aa8a5cd53b34e987cd32a0509668f42ac0",
       "required_parts": [
         "[Content_Types].xml",
         "_rels/.rels",
