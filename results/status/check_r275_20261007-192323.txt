@@ -1,0 +1,422 @@
+check round 275 on LAPTOP-R77M5D6M - failed (exit 1)
+cmd: powershell -NoProfile -ExecutionPolicy Bypass -File code/local_check.ps1
+elapsed: 37s
+
+[FAIL] non-ASCII bytes in ./code/tasks/t209_deliver_amp_sci_paper.ps1  (keep .ps1 ASCII-only; put Chinese in .md/.json)
+OK: sync.config.json branch=arena/ae80330d-light-skills
+OK: sync.config.json branch matches HEAD (arena/ae80330d-light-skills)
+OK: root scripts identical to skills/git-sync/scripts
+OK: no drive-style variable typos ($var:)
+== exits in Invoke-PollRound: 6
+OK: every exit path sets its closing summary
+== exits in Invoke-PollOnce: 2 (lock held / crashed / normal)
+OK: loop closing lines covered (6 exit paths, all with their own summary)
+OK: every .ps1 parses
+[FAIL] gate failed (exit 1)
+== accept 2a: silent push PROVEN (ls-remote + push --dry-run, prompts disabled)
+== accept 2b (fallback): one LONG-LIVED loop process - one brief flash per logon,
+   not per poll. For zero flash: admin PowerShell -> .\watch.ps1 -Unregister ;
+   .\watch.ps1 -Register -Headless   (or fix the launcher, see watch-*.log)
+== exits in Invoke-PollRound: 6
+OK: every exit path sets its closing summary
+== exits in Invoke-PollOnce: 2 (lock held / crashed / normal)
+OK: loop closing lines covered (6 exit paths, all with their own summary)
+== check_loop_summary PASSED
+== accept 2c: watcher closing lines verified (every exit path has its summary)
+== deliverables: 2 Office file(s) declared in deliverable/OFFICE_HASHES.json
+   OK   3a sha256 + bytes match: deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx (6955486 B, docx)
+   OK   3b all 5 required parts present in deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx
+   OK   3c every XML part parses in deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx (20 parts)
+   OK   3d every relationship target resolves in deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx
+   OK   3e content types cover every part of deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx
+   OK   3f all 6 text markers present in deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx
+   OK   3a sha256 + bytes match: deliverable/method_with_docking_20261007_1600.docx (7042890 B, docx)
+   OK   3b all 5 required parts present in deliverable/method_with_docking_20261007_1600.docx
+   OK   3c every XML part parses in deliverable/method_with_docking_20261007_1600.docx (18 parts)
+   OK   3d every relationship target resolves in deliverable/method_with_docking_20261007_1600.docx
+   OK   3e content types cover every part of deliverable/method_with_docking_20261007_1600.docx
+   OK   3f all 6 text markers present in deliverable/method_with_docking_20261007_1600.docx
+   OK   3h Word.Application opened read-only, name=AMP_Alligator_Gut_SCI_Manuscript.docx : deliverable\AMP_Alligator_Gut_SCI_Manuscript.docx
+   OK   3h Word.Application opened read-only, name=method_with_docking_20261007_1600.docx : deliverable\method_with_docking_20261007_1600.docx
+== task r275: t209_deliver_amp_sci_paper.ps1
+HOST=LAPTOP-R77M5D6M
+REPO=E:\0github\git-sync\Light-skills-ae80330d
+DESKTOP=D:\桌面
+SCI_DOCX_SIZE=6955486
+METHOD_DOCX_SIZE=7042890
+DELIVERED_TO=D:\桌面\AMP_SCI_Paper
+DELIVERED_TO=D:\桌面\AMP_Docking_Vina_R255_20261005_1552
+WORD_COM_OPEN=True paragraphs=407 tables=3 sections=3
+REPORT_WRITTEN=E:\0github\git-sync\Light-skills-ae80330d\results\status\round274_amp_sci_delivery_report.md
+AMP_SCI_TASK_DONE=True
+== task r275 t209_deliver_amp_sci_paper.ps1 ok (5s)
+== accept 2d: hands-free auto_pull/auto_push present in watch.ps1
+== success criteria: results/status/success_criteria.json
+   Round 273 on arena/ae80330d-light-skills: Complete Periodontitis AChE PAS SCI manuscript delivered. Full IMRaD article with expanded 7-paragraph Introduction, 22-task UniDL4BioPep, oral catalogue matching, 12-peptide AutoDock Vina docking, 100-ns GROMACS MD, and Discussion. Mixed orientation: Portrait for body text & PyMOL figures, Landscape for Table pages (Tables 1-7). PyMOL 3D docking poses (Figure 3 A-F, Figure 4 G-L, Figure S1) and 100-ns MD figures directly embedded.
+   FAIL MISSING file: 01a0a821.md
+   OK   exists: skills/git-sync/VERSION (7 B)
+   OK   exists: skills/git-sync/scripts/agent-install.sh (13704 B)
+   OK   exists: skills/git-sync/scripts/agent-handoff.sh (4728 B)
+   OK   exists: skills/git-sync/scripts/agent-handsfree.sh (4111 B)
+   OK   exists: skills/git-sync/scripts/agent-criteria.sh (5361 B)
+   OK   exists: skills/git-sync/scripts/watch.ps1 (85793 B)
+   OK   exists: skills/git-sync/templates/one-sentence.md (6662 B)
+   OK   exists: skills/git-sync/templates/gate.yml (1206 B)
+   OK   exists: code/check_all.sh (10173 B)
+   OK   exists: code/local_check.ps1 (30767 B)
+   FAIL MISSING file: code/make_link_proof.py
+   OK   exists: deliverable/OFFICE_HASHES.json (1585 B)
+   FAIL MISSING file: deliverable/LINK_PROOF_v2.8.1.docx
+   FAIL MISSING file: deliverable/LINK_PROOF_v2.8.1.pptx
+   OK   exists: watch.ps1 (85793 B)
+   OK   exists: code/tasks/manifest.json (16044 B)
+   FAIL MISSING file: code/tasks/t1_antigravity_diag.ps1
+   FAIL MISSING file: code/tasks/t2_java_diag.ps1
+   FAIL MISSING file: code/tasks/t3_edrive_scan.ps1
+   FAIL MISSING file: code/tasks/t1_fix_antigravity.ps1
+   FAIL MISSING file: code/tasks/t3_edrive_scan2.ps1
+   FAIL MISSING file: code/tasks/t2_install_java.ps1
+   FAIL MISSING file: code/tasks/t3_edrive_scan3.ps1
+   FAIL MISSING file: code/tasks/t4_cleanup_dryrun.ps1
+   FAIL MISSING file: code/tasks/t1_antigravity_verify.ps1
+   FAIL MISSING file: code/tasks/t2_cleanup_exec.ps1
+   FAIL MISSING file: results/status/round22_findings.md
+   FAIL MISSING file: code/tasks/t5_cleanup_fix.ps1
+   FAIL MISSING file: code/tasks/t7_ligplus_test.ps1
+   FAIL MISSING file: code/tasks/t1_antigravity_tun2.ps1
+   FAIL MISSING file: code/tasks/t6_docker_report.ps1
+   FAIL MISSING file: code/tasks/t8_uvcache_finish.ps1
+   FAIL MISSING file: code/tasks/t9_ligplus_upgrade.ps1
+   FAIL MISSING file: code/tasks/t10_ligplus_final.ps1
+   FAIL MISSING file: code/tasks/t11_javagui_fix.ps1
+   FAIL MISSING file: code/tasks/t12_ligplus_new.ps1
+   FAIL MISSING file: code/tasks/t13_docker_autofigure.ps1
+   FAIL MISSING file: code/tasks/t14_recyclebin_empty.ps1
+   FAIL MISSING file: code/tasks/t15_uvcache_final.ps1
+   FAIL MISSING file: code/tasks/t16_uvcache_final2.ps1
+   FAIL MISSING file: code/tasks/t17_uv_delete_bg.ps1
+   FAIL MISSING file: code/tasks/t18_edrive_survey.ps1
+   FAIL MISSING file: code/tasks/t17b_uv_finish.ps1
+   FAIL MISSING file: code/tasks/t19_cleanup_approved.ps1
+   FAIL MISSING file: code/tasks/t20_docker_pagefile.ps1
+   FAIL MISSING file: code/tasks/t21_optimize_review.ps1
+   FAIL MISSING file: code/tasks/t22_pagefile_uac.ps1
+   FAIL MISSING file: code/tasks/t23_tailscale_verify.ps1
+   FAIL MISSING file: code/tasks/t24_oldsync_cleanup.ps1
+   FAIL MISSING file: code/tasks/t25_oldtask_uac.ps1
+   FAIL MISSING file: code/tasks/t26_pagefile_fix_uac.ps1
+   FAIL MISSING file: code/tasks/t27_pagefile_registry.ps1
+   FAIL MISSING file: code/tasks/t28_reboot_verify.ps1
+   FAIL MISSING file: code/tasks/t29_ddrive_survey.ps1
+   FAIL MISSING file: code/tasks/t30_tailscale_prep.ps1
+   FAIL MISSING file: code/tasks/t31_enable_rdp_ssh.ps1
+   FAIL MISSING file: code/tasks/t32_wsl26_survey.ps1
+   FAIL MISSING file: code/tasks/t33_hpc_probe.ps1
+   FAIL MISSING file: code/tasks/t34_hpc_bridge.ps1
+   FAIL MISSING file: code/tasks/t35_desktop_access_probe.ps1
+   FAIL MISSING file: code/tasks/t36_autostart_vpn_tailscale.ps1
+   FAIL MISSING file: code/tasks/t37_software_inventory.ps1
+   FAIL MISSING file: code/tasks/t38_uninstall_qwenpaw.ps1
+   FAIL MISSING file: code/tasks/t39_toolbox_and_paths.ps1
+   FAIL MISSING file: code/tasks/t40_mcp_n8n_r_survey.ps1
+   FAIL MISSING file: code/tasks/t41_bigdocs_report.ps1
+   FAIL MISSING file: code/tasks/t42_fix_desktop_and_rdetail.ps1
+   FAIL MISSING file: code/tasks/t43_wsl_r_probe2.ps1
+   FAIL MISSING file: code/tasks/t44_r_final_check.ps1
+   FAIL MISSING file: code/tasks/t45_r_versions_cleanup.ps1
+   FAIL MISSING file: code/tasks/t46_zotero_recon.ps1
+   FAIL MISSING file: code/tasks/t47_pipeline_fetch.ps1
+   FAIL MISSING file: code/tasks/t48_run.ps1
+   FAIL MISSING file: code/tasks/t48_english_citations.py
+   FAIL MISSING file: code/tasks/t48_zotero_match.py
+   FAIL MISSING file: code/tasks/t49_run.ps1
+   FAIL MISSING file: code/tasks/t49_dump_refs.py
+   FAIL MISSING file: code/tasks/t50_run.ps1
+   FAIL MISSING file: code/tasks/t50_zotero_link.py
+   FAIL MISSING file: code/tasks/t51_run.ps1
+   FAIL MISSING file: code/tasks/t51_verify_fix.py
+   FAIL MISSING file: code/tasks/t52_run.ps1
+   FAIL MISSING file: code/tasks/t52_build_final.py
+   FAIL MISSING file: code/tasks/t53_word_check.ps1
+   FAIL MISSING file: code/tasks/t54_recon2.ps1
+   FAIL MISSING file: code/tasks/t54_crossref_verify.py
+   FAIL MISSING file: code/tasks/t55_run.ps1
+   FAIL MISSING file: code/tasks/t55_rebuild9.py
+   FAIL MISSING file: code/tasks/t56_abtest.ps1
+   FAIL MISSING file: code/tasks/t56_import_zotero.py
+   FAIL MISSING file: code/tasks/t57_run.ps1
+   FAIL MISSING file: code/tasks/t57_bind_uris.py
+   FAIL MISSING file: code/tasks/t58_recon_install.ps1
+   FAIL MISSING file: code/tasks/t59_install_bridge.ps1
+   FAIL MISSING file: code/tasks/t60_rot_bridge.ps1
+   FAIL MISSING file: code/tasks/t61_rot_fallback.ps1
+   FAIL MISSING file: code/tasks/t62_file_bridge.ps1
+   FAIL MISSING file: code/tasks/fig1_rebuild_worker.ps1
+   FAIL MISSING file: code/tasks/t63_final_rebuild.ps1
+   FAIL MISSING file: code/tasks/t64_poll_rebuild.ps1
+   FAIL MISSING file: code/tasks/t65_relaunch_worker.ps1
+   FAIL MISSING file: code/tasks/t66_diag_rebuild.ps1
+   FAIL MISSING file: code/tasks/t67_probe_ai_state.ps1
+   FAIL MISSING file: code/tasks/t68_bridge_v2_resume.ps1
+   FAIL MISSING file: code/tasks/t69_tfprobe.ps1
+   FAIL MISSING file: code/tasks/t70_v2_rebuild.ps1
+   FAIL MISSING file: code/tasks/t71_install_celllct.ps1
+   FAIL MISSING file: code/tasks/t72_fix_getcs.ps1
+   FAIL MISSING file: code/tasks/t73_v5_relaunch.ps1
+   FAIL MISSING file: code/tasks/t74_hpc_watch.ps1
+   FAIL MISSING file: code/tasks/t75_test_celllct.ps1
+   FAIL MISSING file: code/tasks/t76_test_cellsu7.ps1
+   FAIL MISSING file: code/tasks/t77_demo_celllct.ps1
+   FAIL MISSING file: code/tasks/t78_demo_cellsu7.ps1
+   FAIL MISSING file: code/tasks/t79_desktop_ssh_and_paths.ps1
+   FAIL MISSING file: code/tasks/t80_desktop_ssh_stability.ps1
+   FAIL MISSING file: code/tasks/t81_smb_key_install.ps1
+   FAIL MISSING file: code/tasks/t82_bni_ssh_test.ps1
+   FAIL MISSING file: code/tasks/t83_deskprobe.ps1
+   FAIL MISSING file: code/tasks/t84_deskstage_sync.ps1
+   FAIL MISSING file: code/tasks/desktop_worker.ps1
+   FAIL MISSING file: code/tasks/install_desktop.ps1
+   FAIL MISSING file: code/tasks/t85_syncfix.ps1
+   FAIL MISSING file: code/tasks/t86_deskinstall.ps1
+   FAIL MISSING file: code/tasks/t87_deskpython.ps1
+   FAIL MISSING file: code/tasks/t88_deskdeps.ps1
+   FAIL MISSING file: code/tasks/t89_desk_fixture.ps1
+   FAIL MISSING file: code/tasks/t90_desk_fig1.ps1
+   FAIL MISSING file: code/tasks/t91_desk_fig1b.ps1
+   FAIL MISSING file: code/tasks/t92_desk_collect.ps1
+   FAIL MISSING file: code/tasks/t93_desk_antigravity.ps1
+   FAIL MISSING file: code/tasks/desk_antigravity_diag.ps1
+   FAIL MISSING file: code/tasks/t94_desk_agy_fix.ps1
+   FAIL MISSING file: code/tasks/desk_antigravity_fix.ps1
+   FAIL MISSING file: code/tasks/t95_desk_agy_fix2.ps1
+   FAIL MISSING file: code/tasks/desk_antigravity_fix2.ps1
+   FAIL MISSING file: code/tasks/t96_desk_agy_verify.ps1
+   FAIL MISSING file: code/tasks/desk_antigravity_verify.ps1
+   FAIL MISSING file: code/tasks/t97_desk_agy_fix3.ps1
+   FAIL MISSING file: code/tasks/desk_antigravity_fix3.ps1
+   FAIL MISSING file: code/tasks/t98_desk_agy_verify2.ps1
+   FAIL MISSING file: code/tasks/desk_antigravity_verify2.ps1
+   FAIL MISSING file: code/tasks/t99_desk_agy_verify3.ps1
+   FAIL MISSING file: code/tasks/desk_antigravity_verify3.ps1
+   FAIL MISSING file: code/tasks/t100_desk_agy_fix4.ps1
+   FAIL MISSING file: code/tasks/desk_antigravity_fix4.ps1
+   FAIL MISSING file: code/tasks/t101_desk_agy_fix4.ps1
+   FAIL MISSING file: code/tasks/t102_desk_agy_verify4.ps1
+   FAIL MISSING file: code/tasks/desk_antigravity_verify4.ps1
+   FAIL MISSING file: code/tasks/t103_desk_sync_survey.ps1
+   FAIL MISSING file: code/tasks/desk_survey_sync.ps1
+   FAIL MISSING file: code/tasks/t104_desk_ide_sync.ps1
+   FAIL MISSING file: code/tasks/desk_sync_ide.ps1
+   FAIL MISSING file: code/tasks/t105_laptop_wps_harness.ps1
+   FAIL MISSING file: code/tasks/t106_laptop_impress_patch.ps1
+   FAIL MISSING file: code/tasks/desk_wps_install.ps1
+   FAIL MISSING file: code/tasks/verify_pptx.py
+   FAIL MISSING file: code/tasks/t107_laptop_impress_patch2.ps1
+   FAIL MISSING file: code/tasks/t108_laptop_harness_patch2.ps1
+   FAIL MISSING file: code/tasks/patch_harness.py
+   FAIL MISSING file: code/tasks/wpsdl.cmd
+   FAIL MISSING file: code/tasks/t109_laptop_impress_retry.ps1
+   FAIL MISSING file: code/tasks/t109_cancel_desktop_status.ps1
+   FAIL MISSING file: code/tasks/t110_desk_wpsdl_fix.ps1
+   FAIL MISSING file: code/tasks/t111_desk_wps_go.ps1
+   FAIL MISSING file: code/tasks/t112_desk_deck_collect.ps1
+   FAIL MISSING file: code/tasks/desk_harness_deck.py
+   FAIL MISSING file: code/tasks/t111b_desk_wps_go2.ps1
+   FAIL MISSING file: code/tasks/t113_desk_wps_silent.ps1
+   FAIL MISSING file: code/tasks/desk_wps_install2.ps1
+   FAIL MISSING file: code/tasks/t114_desk_wps_launch.ps1
+   FAIL MISSING file: code/tasks/desk_wps_launch.ps1
+   FAIL MISSING file: code/tasks/t115_desk_wps_register.ps1
+   FAIL MISSING file: code/tasks/desk_wps_register.ps1
+   FAIL MISSING file: code/tasks/t116_desk_interactive.ps1
+   FAIL MISSING file: code/tasks/desk_wps_interactive.ps1
+   FAIL MISSING file: code/tasks/wpsrun.cmd
+   FAIL MISSING file: code/tasks/t117_desk_automation.ps1
+   FAIL MISSING file: code/tasks/desk_wps_automation.ps1
+   FAIL MISSING file: code/tasks/t118_desk_final.ps1
+   FAIL MISSING file: code/tasks/desk_wps_final.ps1
+   FAIL MISSING file: code/tasks/t119_desk_final2.ps1
+   FAIL MISSING file: code/tasks/desk_wps_final2.ps1
+   FAIL MISSING file: code/tasks/t120_desk_warm.ps1
+   FAIL MISSING file: code/tasks/desk_wpp_warm.ps1
+   FAIL MISSING file: code/tasks/t121_desk_warm2.ps1
+   FAIL MISSING file: code/tasks/desk_warm2.ps1
+   FAIL MISSING file: code/tasks/deck_warm_build.py
+   FAIL MISSING file: code/tasks/t122_amp_deck.ps1
+   FAIL MISSING file: code/tasks/desk_amp_deck.ps1
+   FAIL MISSING file: code/tasks/amp_deck_build.py
+   FAIL MISSING file: code/tasks/t123_amp_deck2.ps1
+   FAIL MISSING file: code/tasks/desk_amp_deck2.ps1
+   FAIL MISSING file: code/tasks/amp_deck_v2_build.py
+   FAIL MISSING file: code/tasks/t124_cpe_setup.ps1
+   FAIL MISSING file: code/tasks/desk_cpe_setup.ps1
+   FAIL MISSING file: code/tasks/t125_cpe_setup2.ps1
+   FAIL MISSING file: code/tasks/t126_cpe_test.ps1
+   FAIL MISSING file: code/tasks/desk_cpe_test.ps1
+   FAIL MISSING file: code/tasks/t127_cpe_test2.ps1
+   FAIL MISSING file: code/tasks/desk_cpe_test2.ps1
+   FAIL MISSING file: code/tasks/t128_cpe_test3.ps1
+   FAIL MISSING file: code/tasks/desk_cpe_test3.ps1
+   FAIL MISSING file: code/tasks/watcher.ps1
+   FAIL MISSING file: code/tasks/prepcpe.ps1
+   FAIL MISSING file: code/tasks/t129_cpe_test4.ps1
+   FAIL MISSING file: code/tasks/desk_cpe_test4.ps1
+   FAIL MISSING file: code/tasks/t189_muse_tailscale_probe_r238.ps1
+   FAIL MISSING file: results/status/muse_tailscale_probe_r238.md
+   FAIL MISSING file: code/tasks/make_timeonly_turnitin_pdfs.py
+   FAIL MISSING file: code/tasks/t190_deliver_timeonly_pdfs_r239.ps1
+   FAIL MISSING file: deliverable/AI_English_from_docx.pdf
+   FAIL MISSING file: deliverable/plag_English_from_docx.pdf
+   FAIL MISSING file: results/status/timeonly_pdfs_r239.json
+   FAIL MISSING file: results/status/timeonly_pdfs_r239.md
+   FAIL MISSING file: code/tasks/t191_deliver_no_overwrite_pdfs_r241.ps1
+   FAIL MISSING file: results/status/no_overwrite_pdf_manifest_r241.json
+   FAIL MISSING file: deliverable/AI_English_timeonly_20261003_1545.pdf
+   FAIL MISSING file: deliverable/plag_English_timeonly_20261003_1545.pdf
+   FAIL MISSING file: deliverable/AI_English_previous_01a0ff64_r244_20261003_1045.pdf
+   FAIL MISSING file: deliverable/plag_English_previous_01a0ff64_r244_20261003_1045.pdf
+   FAIL MISSING file: results/muse/HANDOFF.md
+   FAIL MISSING file: sources/muse/.gitkeep
+   FAIL MISSING file: deliverable/muse/.gitkeep
+   FAIL MISSING file: code/tasks/t192_muse_interconnect_probe_r242.ps1
+   FAIL MISSING file: results/muse/INTERCONNECT_R242.md
+   FAIL MISSING file: results/muse/INTERCONNECT_R242.json
+   FAIL MISSING file: code/tasks/t193_muse_interconnect_probe_r243.ps1
+   FAIL MISSING file: results/muse/INTERCONNECT_R243.md
+   FAIL MISSING file: results/muse/INTERCONNECT_R243.json
+   FAIL MISSING file: results/muse/bridge_test_20261003.json
+   FAIL MISSING file: code/tasks/t194_muse_v2ray_takeover_r244.ps1
+   FAIL MISSING file: sources/muse/muse_out_20261003_1633.zip
+   FAIL MISSING file: results/muse/status_20261003_1633.json
+   FAIL MISSING file: results/muse/MUSE_V2RAY_TAKEOVER_R244.md
+   FAIL MISSING file: results/muse/MUSE_V2RAY_TAKEOVER_R244.json
+   FAIL MISSING file: results/muse/extracted_20261003_1633/README.txt
+   FAIL MISSING file: results/muse/extracted_20261003_1633/outputs/Hello-World/README
+   FAIL MISSING file: results/antigravity/V2RAY_TAKEOVER_LOCAL_R244.md
+   FAIL MISSING file: code/tasks/t195_install_qingjian_ime_r247.ps1
+   FAIL MISSING file: results/input/QINGJIAN_INSTALL_R247.md
+   FAIL MISSING file: sources/muse/muse_out_smoke_20261003_1718.zip
+   FAIL MISSING file: results/muse/status_smoke_20261003_1718.json
+   FAIL MISSING file: results/muse/requests/muse-smoke-20261003-1718.json
+   FAIL MISSING file: skills/cloud-interop/SKILL.md
+   FAIL MISSING file: skills/cloud-interop/README_CN.md
+   FAIL MISSING file: skills/cloud-interop/scripts/setup-gdrive-rclone.ps1
+   FAIL MISSING file: skills/cloud-interop/scripts/interop-health.ps1
+   FAIL MISSING file: code/tasks/t196_gdrive_computer_use_r249.ps1
+   FAIL MISSING file: results/cloud_interop/GDRIVE_SETUP_R249.md
+   FAIL MISSING file: results/cloud_interop/INTEROP_HEALTH.md
+   FAIL MISSING file: results/computer_use/COMPUTER_USE_LAPTOP_R249.md
+   FAIL MISSING file: results/computer_use/COMPUTER_USE_LAPTOP_R249.json
+   FAIL MISSING file: skills/computer-use/SKILL.md
+   FAIL MISSING file: skills/computer-use/README_CN.md
+   FAIL MISSING file: code/tasks/t197_amp_vina_docking_r255.ps1
+   FAIL MISSING file: code/tasks/peptide_vina_pipeline.py
+   FAIL MISSING file: results/docking/AMP_DOCKING_R255.md
+   FAIL MISSING file: results/docking/AMP_Docking_Vina_R255/REPORT.md
+   OK   exists: results/docking/AMP_Docking_Vina_R255/tables/vina_summary_mean_of_3.csv (4000 B)
+   FAIL MISSING file: results/docking/AMP_Docking_Vina_R255/tables/vina_repeats.csv
+   FAIL MISSING file: results/docking/AMP_Docking_Vina_R255/figures/vina_affinity_heatmap.png
+   FAIL MISSING file: results/docking/AMP_Docking_Vina_R255/tables/selected_best_complexes_for_figures.csv
+   FAIL MISSING file: code/tasks/amp_docking_report_and_sci_figures.py
+   FAIL MISSING file: code/tasks/t199_amp_report_sci_figures_r260.ps1
+   FAIL MISSING file: results/docking/AMP_REPORT_SCI_FIGURES_R260.md
+   FAIL MISSING file: results/docking/AMP_Docking_Vina_R255/AMP_Docking_Targets_Methods_Results.md
+   FAIL MISSING file: results/docking/AMP_Docking_Vina_R255/AMP_Docking_Targets_Methods_Results.docx
+   OK   exists: results/docking/AMP_Docking_Vina_R255/complexes_best_vina/sci_composite_figures/Figure_4_Part1_A-F_300dpi.png (1764604 B)
+   OK   exists: results/docking/AMP_Docking_Vina_R255/complexes_best_vina/sci_composite_figures/Figure_4_Part2_G-L_300dpi.png (1914815 B)
+   OK   exists: results/docking/AMP_Docking_Vina_R255/complexes_best_vina/sci_composite_figures/Figure_S1_12_Combined_300dpi.png (3357436 B)
+   FAIL MISSING file: results/docking/AMP_Docking_Vina_R255/complexes_best_vina/all_panel_render_records.csv
+   FAIL MISSING file: deliverable/Periodontitis_AChE_SCI_Submission_English.docx
+   FAIL MISSING file: deliverable/Periodontitis_AChE_SCI_Submission_Chinese.docx
+   FAIL MISSING file: projects/porphyromonas-ad-mechanism-manuscript/manuscript/sci_submission/English.docx
+   FAIL MISSING file: projects/porphyromonas-ad-mechanism-manuscript/manuscript/sci_submission/Chinese.docx
+   FAIL MISSING file: projects/porphyromonas-ad-mechanism-manuscript/manuscript/sci_submission/English.md
+   FAIL MISSING file: projects/porphyromonas-ad-mechanism-manuscript/manuscript/figures/fig_docking_poses_A_F.png
+   FAIL MISSING file: projects/porphyromonas-ad-mechanism-manuscript/manuscript/figures/fig_docking_poses_G_L.png
+   FAIL MISSING file: projects/porphyromonas-ad-mechanism-manuscript/docking/sci_composite_figures/Figure_4_Part1_A-F_300dpi.png
+   FAIL MISSING file: projects/porphyromonas-ad-mechanism-manuscript/docking/sci_composite_figures/Figure_4_Part2_G-L_300dpi.png
+   FAIL MISSING file: code/tasks/t208_periodontitis_sci_manuscript.ps1
+   OK   absent: local/inbox
+   OK   absent: local/status_receipts
+   OK   absent: skills/docx_skill.py
+   OK   absent: local_bridge_skill.py
+   OK   contains skills/git-sync/VERSION <- 2.8.1
+   FAIL MISSING for contains: 01a0a821.md
+   OK   contains skills/git-sync/sync.config.json <- arena/ae80330d-light-skills
+   OK   contains skills/git-sync/templates/one-sentence.md <- agent-handoff.sh
+   OK   contains skills/git-sync/scripts/agent-install.sh <- refusing to downgrade
+   OK   contains code/check_all.sh <- py -3
+   OK   contains code/local_check.ps1 <- no Office deliverable declared
+   FAIL DOES NOT contain in deliverable/OFFICE_HASHES.json: arena/01a0a9f0-git-pull-arena
+   OK   contains watch.ps1 <- function Invoke-AutoPull
+   OK   contains skills/git-sync/scripts/watch.ps1 <- function Invoke-Focus
+   OK   contains code/tasks/manifest.json <- t208_periodontitis_sci_manuscript.ps1
+   FAIL MISSING for contains: code/tasks/t1_fix_antigravity.ps1
+   FAIL MISSING for contains: code/tasks/t2_install_java.ps1
+   FAIL MISSING for contains: results/status/muse_tailscale_probe_r238.md
+   FAIL MISSING for contains: results/status/timeonly_pdfs_r239.md
+   FAIL MISSING for contains: results/status/timeonly_pdfs_r239.json
+   FAIL MISSING for contains: results/status/no_overwrite_pdf_manifest_r241.json
+   FAIL MISSING for contains: results/muse/HANDOFF.md
+   FAIL MISSING for contains: code/tasks/t191_deliver_no_overwrite_pdfs_r241.ps1
+   FAIL MISSING for contains: code/tasks/t192_muse_interconnect_probe_r242.ps1
+   FAIL MISSING for contains: results/muse/INTERCONNECT_R242.md
+   FAIL MISSING for contains: code/tasks/t193_muse_interconnect_probe_r243.ps1
+   FAIL MISSING for contains: results/muse/INTERCONNECT_R243.md
+   FAIL MISSING for contains: results/muse/bridge_test_20261003.json
+   FAIL MISSING for contains: code/tasks/t194_muse_v2ray_takeover_r244.ps1
+   FAIL MISSING for contains: results/muse/status_20261003_1633.json
+   FAIL MISSING for contains: results/muse/MUSE_V2RAY_TAKEOVER_R244.md
+   FAIL MISSING for contains: results/input/QINGJIAN_INSTALL_R247.md
+   FAIL MISSING for contains: results/muse/requests/muse-smoke-20261003-1718.json
+   FAIL MISSING for contains: results/muse/status_smoke_20261003_1718.json
+   FAIL MISSING for contains: results/muse/REQUEST_PROTOCOL.md
+   FAIL MISSING for contains: skills/cloud-interop/README_CN.md
+   FAIL MISSING for contains: skills/cloud-interop/SKILL.md
+   FAIL MISSING for contains: results/cloud_interop/GDRIVE_SETUP_R249.md
+   FAIL MISSING for contains: results/cloud_interop/INTEROP_HEALTH.md
+   FAIL MISSING for contains: results/computer_use/COMPUTER_USE_LAPTOP_R249.md
+   FAIL MISSING for contains: skills/computer-use/SKILL.md
+   FAIL MISSING for contains: skills/computer-use/README_CN.md
+   FAIL MISSING for contains: results/skills/SKILLS_INTEROP_SUMMARY.md
+   OK   contains CONNECTIONS.md <- gdrive_jzthjyz:Arena/interop/probe-20261003-203544.txt
+   FAIL MISSING for contains: results/docking/AMP_DOCKING_R255.md
+   FAIL MISSING for contains: results/docking/AMP_Docking_Vina_R255/REPORT.md
+   OK   contains results/docking/AMP_Docking_Vina_R255/tables/vina_summary_mean_of_3.csv <- FVNKLNRIIPVKGFSMR
+   FAIL MISSING for contains: results/docking/AMP_Docking_Vina_R255/tables/vina_repeats.csv
+   FAIL MISSING for contains: code/tasks/t197_amp_vina_docking_r255.ps1
+   FAIL MISSING for contains: results/docking/AMP_REPORT_SCI_FIGURES_R260.md
+   FAIL MISSING for contains: results/docking/AMP_Docking_Vina_R255/AMP_Docking_Targets_Methods_Results.md
+   FAIL MISSING for contains: results/docking/AMP_Docking_Vina_R255/complexes_best_vina/all_panel_render_records.csv
+   FAIL MISSING for contains: projects/porphyromonas-ad-mechanism-manuscript/manuscript/sci_submission/English.md
+   OK   regex watch.ps1
+   OK   regex code/local_check.ps1
+   OK   regex deliverable/OFFICE_HASHES.json
+   FAIL MISSING for regex: results/muse/INTERCONNECT_R242.md
+   FAIL MISSING for regex: results/muse/INTERCONNECT_R243.md
+   FAIL MISSING for regex: results/muse/MUSE_V2RAY_TAKEOVER_R244.md
+   FAIL MISSING for regex: results/input/QINGJIAN_INSTALL_R247.md
+   FAIL MISSING for regex: results/computer_use/COMPUTER_USE_LAPTOP_R249.md
+   FAIL MISSING for regex: results/docking/AMP_DOCKING_R255.md
+   FAIL MISSING for regex: results/docking/AMP_Docking_Vina_R255/REPORT.md
+   FAIL MISSING for regex: results/docking/AMP_REPORT_SCI_FIGURES_R260.md
+   OK   size skills/git-sync/scripts/agent-handoff.sh: 4728 >= 2000
+   OK   size skills/git-sync/scripts/agent-install.sh: 13704 >= 10000
+   OK   size code/check_all.sh: 10173 >= 8000
+   OK   size code/local_check.ps1: 30767 >= 12000
+   FAIL MISSING for min_bytes: code/make_link_proof.py
+   OK   size deliverable/OFFICE_HASHES.json: 1585 >= 500
+   FAIL MISSING for min_bytes: deliverable/LINK_PROOF_v2.8.1.docx
+   FAIL MISSING for min_bytes: deliverable/LINK_PROOF_v2.8.1.pptx
+   OK   size watch.ps1: 85793 >= 20000
+   FAIL MISSING for min_bytes: deliverable/AI_English_from_docx.pdf
+   FAIL MISSING for min_bytes: deliverable/plag_English_from_docx.pdf
+   FAIL MISSING for min_bytes: deliverable/AI_English_timeonly_20261003_1545.pdf
+   FAIL MISSING for min_bytes: deliverable/plag_English_timeonly_20261003_1545.pdf
+   FAIL MISSING for min_bytes: deliverable/AI_English_previous_01a0ff64_r244_20261003_1045.pdf
+   FAIL MISSING for min_bytes: deliverable/plag_English_previous_01a0ff64_r244_20261003_1045.pdf
+   FAIL MISSING for min_bytes: sources/muse/muse_out_20261003_1633.zip
+   FAIL MISSING for min_bytes: deliverable/Periodontitis_AChE_SCI_Submission_English.docx
+   FAIL MISSING for min_bytes: deliverable/Periodontitis_AChE_SCI_Submission_Chinese.docx
+   FAIL MISSING for max_bytes: deliverable/LINK_PROOF_v2.8.1.docx
+   FAIL MISSING for max_bytes: deliverable/LINK_PROOF_v2.8.1.pptx
