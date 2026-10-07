@@ -20,7 +20,7 @@ from docx.enum.section import WD_SECTION, WD_ORIENTATION
 from docx.oxml import parse_xml, OxmlElement
 from docx.oxml.ns import nsdecls, qn
 
-WORKSPACE = "/home/user/Light-skills"
+WORKSPACE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 def find_user_fig_dir():
     # Priority 1: User's real SCI_Docking_Figure4_Suite on Windows local machine
     cands = [

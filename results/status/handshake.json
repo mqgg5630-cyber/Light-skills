@@ -1,9 +1,9 @@
 {
-    "round":  276,
-    "arena_state":  "awaiting_check",
-    "local_state":  "passed",
-    "host":  "LAPTOP-R77M5D6M",
-    "note":  "deliver Alligator Gut AMP SCI Manuscript using exact SCI_Docking_Figure4_Suite figures to desktop",
-    "arena_updated":  "2026-10-07 11:33:06",
-    "local_updated":  "2026-10-07 19:35:24"
+  "round": 276,
+  "arena_state": "accepted",
+  "local_state": "passed",
+  "host": "LAPTOP-R77M5D6M",
+  "note": "deliver Alligator Gut AMP SCI Manuscript using exact SCI_Docking_Figure4_Suite figures to desktop",
+  "arena_updated": "2026-10-07 11:36:23",
+  "local_updated": "2026-10-07 19:35:24"
 }
