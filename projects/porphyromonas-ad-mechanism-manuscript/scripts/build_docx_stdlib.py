@@ -196,12 +196,61 @@ def image_para(rel_id: str, path: Path, docpr_id: int, alt: str) -> str:
     return f'<w:p><w:pPr><w:pStyle w:val="Figure"/><w:jc w:val="center"/><w:keepNext/></w:pPr>{drawing}</w:p>'
 
 
-def table_xml(rows: list[list[str]], citation_numbers: dict[str, int] | None = None, base_size: int = 17) -> str:
+def make_sect_pr(orientation: str = "portrait", clean_manuscript: bool = False) -> str:
+    header_footer_refs = (
+        ""
+        if clean_manuscript
+        else '<w:headerReference w:type="default" r:id="rId4"/>'
+        '<w:footerReference w:type="default" r:id="rId5"/>'
+    )
+    margin = 1440 if clean_manuscript else 1134
+    line_pitch = 480 if clean_manuscript else 312
+    if orientation == "landscape":
+        pg_sz = '<w:pgSz w:w="16838" w:h="11906" w:orient="landscape"/>'
+    else:
+        pg_sz = '<w:pgSz w:w="11906" w:h="16838"/>'
+    return (
+        f'<w:sectPr>{header_footer_refs}{pg_sz}'
+        f'<w:pgMar w:top="{margin}" w:right="{margin}" w:bottom="{margin}" w:left="{margin}" '
+        'w:header="600" w:footer="600" w:gutter="0"/><w:cols w:space="720"/>'
+        f'<w:docGrid w:linePitch="{line_pitch}"/></w:sectPr>'
+    )
+
+
+def is_table_caption_line(lines: list[str], idx: int) -> bool:
+    line = lines[idx].rstrip()
+    if not (line.startswith("**Table") or line.startswith("**表")):
+        return False
+    j = idx + 1
+    while j < len(lines) and not lines[j].strip():
+        j += 1
+    if j < len(lines) and lines[j].strip().startswith("|"):
+        return True
+    return False
+
+
+def has_more_tables_ahead(lines: list[str], idx: int) -> bool:
+    j = idx
+    while j < len(lines) and not lines[j].strip():
+        j += 1
+    if j < len(lines):
+        line = lines[j].strip()
+        if line.startswith("|") or is_table_caption_line(lines, j):
+            return True
+    return False
+
+
+def table_xml(
+    rows: list[list[str]],
+    citation_numbers: dict[str, int] | None = None,
+    base_size: int = 17,
+    is_landscape: bool = False,
+) -> str:
     """Build a journal-style three-line table: top, header-bottom, and final-bottom."""
-    cols = max(len(r) for r in rows)
+    cols = max(len(r) for r in rows) if rows else 0
     rows = [r + [""] * (cols - len(r)) for r in rows]
-    total = 9360
-    colw = max(500, total // cols)
+    total = 13958 if is_landscape else 9360
+    colw = max(500, total // cols) if cols else total
     grid = "".join(f'<w:gridCol w:w="{colw}"/>' for _ in range(cols))
     tr_xml = []
     for ri, row in enumerate(rows):
@@ -254,6 +303,8 @@ def parse_markdown(
     bibliography: Path | None = None,
     reject_images: bool = False,
     journal_body: bool = False,
+    landscape_tables: bool = False,
+    clean_manuscript: bool = False,
 ):
     lines = md_path.read_text(encoding="utf-8").splitlines()
     citation_numbers = manuscript_citation_numbers(md_path, bibliography)
@@ -265,6 +316,7 @@ def parse_markdown(
     i = 0
     first_h2 = True
     current_h2 = ""
+    current_orientation = "portrait"
     while i < len(lines):
         line = lines[i].rstrip()
         if not line:
@@ -288,14 +340,27 @@ def parse_markdown(
             docpr_id += 1
             i += 1
             continue
+        if landscape_tables and is_table_caption_line(lines, i):
+            if current_orientation == "portrait":
+                body.append(f'<w:p><w:pPr>{make_sect_pr("portrait", clean_manuscript)}</w:pPr></w:p>')
+                current_orientation = "landscape"
+            body.append(para_xml(line, "Caption", citation_numbers=citation_numbers))
+            i += 1
+            continue
         if line.startswith("|") and i + 1 < len(lines) and is_separator(lines[i + 1]):
+            if landscape_tables and current_orientation == "portrait":
+                body.append(f'<w:p><w:pPr>{make_sect_pr("portrait", clean_manuscript)}</w:pPr></w:p>')
+                current_orientation = "landscape"
             rows = [split_table_row(line)]
             i += 2
             while i < len(lines) and lines[i].lstrip().startswith("|"):
                 rows.append(split_table_row(lines[i]))
                 i += 1
-            body.append(table_xml(rows, citation_numbers, base_size=20 if journal_body else 17))
+            body.append(table_xml(rows, citation_numbers, base_size=20 if journal_body else 17, is_landscape=(landscape_tables and current_orientation == "landscape")))
             body.append('<w:p><w:pPr><w:spacing w:after="40"/></w:pPr></w:p>')
+            if landscape_tables and not has_more_tables_ahead(lines, i):
+                body.append(f'<w:p><w:pPr>{make_sect_pr("landscape", clean_manuscript)}</w:pPr></w:p>')
+                current_orientation = "portrait"
             continue
         heading = re.match(r"^(#{1,6})\s+(.+)$", line)
         if heading:
@@ -388,6 +453,7 @@ def build(
     allow_images: bool = False,
     core_timestamp: str | None = None,
     bibliography: Path | None = None,
+    landscape_tables: bool = False,
 ):
     body, images, image_order = parse_markdown(
         md_path,
@@ -395,20 +461,11 @@ def build(
         bibliography=bibliography,
         reject_images=clean_manuscript and not allow_images,
         journal_body=clean_manuscript,
+        landscape_tables=landscape_tables,
+        clean_manuscript=clean_manuscript,
     )
     ns = f'xmlns:w="{W}" xmlns:r="{R}" xmlns:wp="{WP}" xmlns:a="{A}" xmlns:pic="{PIC}"'
-    header_footer_refs = "" if clean_manuscript else (
-        '<w:headerReference w:type="default" r:id="rId4"/>'
-        '<w:footerReference w:type="default" r:id="rId5"/>'
-    )
-    margin = 1440 if clean_manuscript else 1134
-    line_pitch = 480 if clean_manuscript else 312
-    sect = (
-        f'<w:sectPr>{header_footer_refs}<w:pgSz w:w="11906" w:h="16838"/>'
-        f'<w:pgMar w:top="{margin}" w:right="{margin}" w:bottom="{margin}" w:left="{margin}" '
-        'w:header="600" w:footer="600" w:gutter="0"/><w:cols w:space="720"/>'
-        f'<w:docGrid w:linePitch="{line_pitch}"/></w:sectPr>'
-    )
+    sect = make_sect_pr("portrait", clean_manuscript)
     document = f'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document {ns}><w:body>{body}{sect}</w:body></w:document>'
 
     rels = [
@@ -499,6 +556,11 @@ def main():
         action="store_true",
         help="Embed local PNG figures even when --clean-manuscript is set.",
     )
+    parser.add_argument(
+        "--landscape-tables",
+        action="store_true",
+        help="Render table pages in landscape orientation while keeping body text and figures in portrait.",
+    )
     args = parser.parse_args()
     if args.core_timestamp:
         try:
@@ -515,6 +577,7 @@ def main():
         allow_images=args.allow_images,
         core_timestamp=args.core_timestamp,
         bibliography=args.bibliography.resolve() if args.bibliography else None,
+        landscape_tables=args.landscape_tables,
     )
 
 
