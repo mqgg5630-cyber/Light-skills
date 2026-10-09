@@ -1,38 +1,41 @@
 {
-  "description": "Round 276: Alligator Gut AMP SCI Manuscript and Method Supplement using user SCI_Docking_Figure4_Suite composite figures delivered to local desktop.",
+  "description": "Round 277: Deliver Periodontitis AChE SCI title and flowchart fix (100ns removed, docking->md arrow corrected) and AMP deliverables to local desktop.",
   "require_files": [
     "skills/git-sync/VERSION",
     "skills/git-sync/scripts/watch.ps1",
     "watch.ps1",
     "code/local_check.ps1",
     "code/tasks/manifest.json",
-    "code/tasks/t209_deliver_amp_sci_paper.ps1",
-    "code/tasks/build_amp_full_manuscript.py",
+    "code/tasks/t210_deliver_title_and_flowchart_fix.ps1",
+    "deliverable/Periodontitis_AChE_SCI_Submission_Chinese.docx",
+    "deliverable/Periodontitis_AChE_SCI_Submission_English.docx",
+    "projects/porphyromonas-ad-mechanism-manuscript/manuscript/figures/fig_screening_cascade.svg",
+    "projects/porphyromonas-ad-mechanism-manuscript/manuscript/figures/fig_screening_cascade.png",
     "deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx",
     "deliverable/method_with_docking_20261007_1600.docx",
     "deliverable/AMP_Pipeline_Reproduction_Method.md",
     "deliverable/AMP_Figure_Style_Review.md",
-    "deliverable/AMP_Method_Supplement_manifest.json",
-    "deliverable/OFFICE_HASHES.json",
-    "sources/user_amp/method (1).docx"
+    "deliverable/OFFICE_HASHES.json"
   ],
   "contains": {
     "deliverable/OFFICE_HASHES.json": "AMP_Alligator_Gut_SCI_Manuscript.docx",
-    "code/tasks/manifest.json": "t209_deliver_amp_sci_paper.ps1",
-    "deliverable/AMP_Pipeline_Reproduction_Method.md": "鳄鱼肠道",
-    "deliverable/AMP_Figure_Style_Review.md": "SCI_Docking_Figure4_Suite"
+    "code/tasks/manifest.json": "t210_deliver_title_and_flowchart_fix.ps1",
+    "projects/porphyromonas-ad-mechanism-manuscript/manuscript/sci_submission/Chinese.md": "\u5bf9\u63a5\u4e0e\u5206\u5b50\u52a8\u529b\u5b66\u6a21\u62df",
+    "projects/porphyromonas-ad-mechanism-manuscript/manuscript/sci_submission/English.md": "docking, and molecular dynamics"
   },
   "regex": {
     "watch.ps1": "Invoke-AutoPull",
     "code/local_check.ps1": "OFFICE_HASHES"
   },
   "min_bytes": {
+    "deliverable/Periodontitis_AChE_SCI_Submission_Chinese.docx": 1000000,
+    "deliverable/Periodontitis_AChE_SCI_Submission_English.docx": 1000000,
+    "projects/porphyromonas-ad-mechanism-manuscript/manuscript/figures/fig_screening_cascade.png": 100000,
     "deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx": 1000000,
-    "deliverable/method_with_docking_20261007_1600.docx": 1000000,
     "deliverable/OFFICE_HASHES.json": 500
   },
   "max_bytes": {
-    "deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx": 25000000,
-    "deliverable/method_with_docking_20261007_1600.docx": 25000000
+    "deliverable/Periodontitis_AChE_SCI_Submission_Chinese.docx": 25000000,
+    "deliverable/Periodontitis_AChE_SCI_Submission_English.docx": 25000000
   }
 }
