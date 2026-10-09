@@ -1,0 +1,87 @@
+check round 278 on LAPTOP-R77M5D6M - passed (exit 0)
+cmd: powershell -NoProfile -ExecutionPolicy Bypass -File code/local_check.ps1
+elapsed: 255s
+
+OK: all .ps1 files are ASCII-only
+OK: sync.config.json branch=arena/ae80330d-light-skills
+OK: sync.config.json branch matches HEAD (arena/ae80330d-light-skills)
+OK: root scripts identical to skills/git-sync/scripts
+OK: no drive-style variable typos ($var:)
+== exits in Invoke-PollRound: 6
+OK: every exit path sets its closing summary
+== exits in Invoke-PollOnce: 2 (lock held / crashed / normal)
+OK: loop closing lines covered (6 exit paths, all with their own summary)
+OK: every .ps1 parses
+   (gate ran via E:\hermes\git\bin\bash.exe [git])
+== accept 2a: silent push PROVEN (ls-remote + push --dry-run, prompts disabled)
+== accept 2b (fallback): one LONG-LIVED loop process - one brief flash per logon,
+   not per poll. For zero flash: admin PowerShell -> .\watch.ps1 -Unregister ;
+   .\watch.ps1 -Register -Headless   (or fix the launcher, see watch-*.log)
+== exits in Invoke-PollRound: 6
+OK: every exit path sets its closing summary
+== exits in Invoke-PollOnce: 2 (lock held / crashed / normal)
+OK: loop closing lines covered (6 exit paths, all with their own summary)
+== check_loop_summary PASSED
+== accept 2c: watcher closing lines verified (every exit path has its summary)
+== deliverables: 2 Office file(s) declared in deliverable/OFFICE_HASHES.json
+   OK   3a sha256 + bytes match: deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx (4915454 B, docx)
+   OK   3b all 5 required parts present in deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx
+   OK   3c every XML part parses in deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx (20 parts)
+   OK   3d every relationship target resolves in deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx
+   OK   3e content types cover every part of deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx
+   OK   3f all 6 text markers present in deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx
+   OK   3a sha256 + bytes match: deliverable/method_with_docking_20261007_1600.docx (5002859 B, docx)
+   OK   3b all 5 required parts present in deliverable/method_with_docking_20261007_1600.docx
+   OK   3c every XML part parses in deliverable/method_with_docking_20261007_1600.docx (18 parts)
+   OK   3d every relationship target resolves in deliverable/method_with_docking_20261007_1600.docx
+   OK   3e content types cover every part of deliverable/method_with_docking_20261007_1600.docx
+   OK   3f all 6 text markers present in deliverable/method_with_docking_20261007_1600.docx
+   OK   3h Word.Application opened read-only, name=AMP_Alligator_Gut_SCI_Manuscript.docx : deliverable\AMP_Alligator_Gut_SCI_Manuscript.docx
+   OK   3h Word.Application opened read-only, name=method_with_docking_20261007_1600.docx : deliverable\method_with_docking_20261007_1600.docx
+== task r278: t211_install_douyin.ps1
+HOST=LAPTOP-R77M5D6M
+REPO=E:\0github\git-sync\Light-skills-ae80330d
+TASK=Install Douyin (抖音)
+DESKTOP=D:\桌面
+DOUYIN_NOT_INSTALLED_YET=True. Proceeding with installation...
+TRYING_WINGET: C:\Users\文少\AppData\Local\Microsoft\WindowsApps\winget.exe
+RUNNING: winget install --id ByteDance.Douyin --exact --silent --accept-package-agreements --accept-source-agreements
+宸叉壘鍒?鎶栭煶 [ByteDance.Douyin] 鐗堟湰 8.7.0
+姝ゅ簲鐢ㄧ▼搴忕敱鍏舵墍鏈夎€呮巿鏉冪粰浣犮€?
+Microsoft 瀵圭涓夋柟绋嬪簭鍖呮涓嶈礋璐ｏ紝涔熶笉鍚戠涓夋柟绋嬪簭鍖呮巿浜堜换浣曡鍙瘉銆?
+姝ｅ湪涓嬭浇 https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/douyin-pc-client/7044145585217083655/releases/495279540/8.7.0/win32-ia32/douyin-v8.7.0-win32-ia32-default.exe
+宸叉垚鍔熼獙璇佸畨瑁呯▼搴忓搱甯?
+姝ｅ湪鍚姩绋嬪簭鍖呭畨瑁?..
+宸叉垚鍔熷畨瑁?
+WINGET_EXIT_CODE=0
+DESKTOP_SHORTCUT_EXISTS=D:\桌面\抖音.lnk
+REPORT_WRITTEN=E:\0github\git-sync\Light-skills-ae80330d\results\status\round278_install_douyin_report.md
+INSTALL_DOUYIN_TASK_SUCCESS=True
+== task r278 t211_install_douyin.ps1 ok (220s)
+== accept 2d: hands-free auto_pull/auto_push present in watch.ps1
+== success criteria: results/status/success_criteria.json
+   Round 278: Automated installation of Douyin (TikTok PC client) on host.
+   OK   exists: skills/git-sync/VERSION (7 B)
+   OK   exists: skills/git-sync/scripts/watch.ps1 (85793 B)
+   OK   exists: watch.ps1 (85793 B)
+   OK   exists: code/local_check.ps1 (30767 B)
+   OK   exists: code/tasks/manifest.json (16233 B)
+   OK   exists: code/tasks/t210_deliver_title_and_flowchart_fix.ps1 (5278 B)
+   OK   exists: deliverable/Periodontitis_AChE_SCI_Submission_Chinese.docx (7219037 B)
+   OK   exists: deliverable/Periodontitis_AChE_SCI_Submission_English.docx (7218783 B)
+   OK   exists: projects/porphyromonas-ad-mechanism-manuscript/manuscript/figures/fig_screening_cascade.svg (57794 B)
+   OK   exists: projects/porphyromonas-ad-mechanism-manuscript/manuscript/figures/fig_screening_cascade.png (212659 B)
+   OK   exists: deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx (4915454 B)
+   OK   exists: deliverable/method_with_docking_20261007_1600.docx (5002859 B)
+   OK   exists: deliverable/AMP_Pipeline_Reproduction_Method.md (12107 B)
+   OK   exists: deliverable/AMP_Figure_Style_Review.md (2386 B)
+   OK   exists: deliverable/OFFICE_HASHES.json (1596 B)
+   OK   exists: code/tasks/t211_install_douyin.ps1 (11972 B)
+   OK   size deliverable/Periodontitis_AChE_SCI_Submission_Chinese.docx: 7219037 >= 1000000
+   OK   size deliverable/Periodontitis_AChE_SCI_Submission_English.docx: 7218783 >= 1000000
+   OK   size projects/porphyromonas-ad-mechanism-manuscript/manuscript/figures/fig_screening_cascade.png: 212659 >= 100000
+   OK   size deliverable/AMP_Alligator_Gut_SCI_Manuscript.docx: 4915454 >= 1000000
+   OK   size deliverable/OFFICE_HASHES.json: 1596 >= 500
+   OK   size deliverable/Periodontitis_AChE_SCI_Submission_Chinese.docx: 7219037 <= 25000000
+   OK   size deliverable/Periodontitis_AChE_SCI_Submission_English.docx: 7218783 <= 25000000
+== local checks passed
