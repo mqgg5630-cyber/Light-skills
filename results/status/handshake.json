@@ -1,9 +1,9 @@
 {
-  "round": 277,
-  "arena_state": "accepted",
-  "local_state": "passed",
-  "host": "LAPTOP-R77M5D6M",
-  "note": "deliver title fix (remove 100ns) and screening flowchart fix (docking->md arrow) to desktop",
-  "arena_updated": "2026-10-09 11:37:10",
-  "local_updated": "2026-10-09 09:51:25"
+  "round": 278,
+  "arena_state": "awaiting_check",
+  "local_state": "pending",
+  "host": "",
+  "note": "automated installation of Douyin (TikTok PC client) on host",
+  "arena_updated": "2026-10-09 11:43:45",
+  "local_updated": null
 }
