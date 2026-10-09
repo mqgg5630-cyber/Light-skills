@@ -1,9 +1,9 @@
 {
   "round": 277,
   "arena_state": "awaiting_check",
-  "local_state": "passed",
-  "host": "LAPTOP-R77M5D6M",
+  "local_state": "pending",
+  "host": "",
   "note": "deliver title fix (remove 100ns) and screening flowchart fix (docking->md arrow) to desktop",
-  "arena_updated": "2026-10-09 01:27:03",
-  "local_updated": "2026-10-07 19:35:24"
+  "arena_updated": "2026-10-09 01:28:21",
+  "local_updated": null
 }
