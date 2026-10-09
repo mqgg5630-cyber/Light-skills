@@ -1,8 +1,8 @@
 # Run in PowerShell as Administrator.
 # Keeps ONLY the watcher for this branch repo; closes popups; kills other watchers/tasks.
 param(
-  [string]$Repo   = "E:\0github\git-sync\git-pull-arena-01a0ff69",
-  [string]$Branch = "arena/01a0ff69-git-pull-arena"
+  [string]$Repo   = "E:\0github\git-sync\Light-skills-ae80330d",
+  [string]$Branch = "arena/ae80330d-light-skills"
 )
 $ErrorActionPreference = "Continue"
 Write-Host "== repo: $Repo  branch: $Branch" -ForegroundColor Cyan

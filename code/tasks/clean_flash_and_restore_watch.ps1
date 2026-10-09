@@ -2,7 +2,7 @@
 # 1) removes Lively / Livelycu / zTasker flash-window autoruns (registry + tasks + startup folders), with backup
 # 2) re-enables ONLY this branch's git-sync watcher, hidden (no console window)
 param(
-  [string]$Repo = "E:\0github\git-sync\git-pull-arena-01a0ff69",
+  [string]$Repo = "E:\0github\git-sync\Light-skills-ae80330d",
   [switch]$WhatIfOnly
 )
 $ErrorActionPreference = "Continue"
