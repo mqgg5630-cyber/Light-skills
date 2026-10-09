@@ -1,5 +1,5 @@
 {
-  "description": "Round 278: Automated installation of Douyin (TikTok PC client) on host.",
+  "description": "Round 279: Reinstall Douyin to E: drive, install Xiaohongshu to E: drive.",
   "require_files": [
     "skills/git-sync/VERSION",
     "skills/git-sync/scripts/watch.ps1",
@@ -16,11 +16,12 @@
     "deliverable/AMP_Pipeline_Reproduction_Method.md",
     "deliverable/AMP_Figure_Style_Review.md",
     "deliverable/OFFICE_HASHES.json",
-    "code/tasks/t211_install_douyin.ps1"
+    "code/tasks/t211_install_douyin.ps1",
+    "code/tasks/t212_install_douyin_and_xiaohongshu_edrive.ps1"
   ],
   "contains": {
     "deliverable/OFFICE_HASHES.json": "AMP_Alligator_Gut_SCI_Manuscript.docx",
-    "code/tasks/manifest.json": "t211_install_douyin.ps1",
+    "code/tasks/manifest.json": "t212_install_douyin_and_xiaohongshu_edrive.ps1",
     "projects/porphyromonas-ad-mechanism-manuscript/manuscript/sci_submission/Chinese.md": "\u5bf9\u63a5\u4e0e\u5206\u5b50\u52a8\u529b\u5b66\u6a21\u62df",
     "projects/porphyromonas-ad-mechanism-manuscript/manuscript/sci_submission/English.md": "docking, and molecular dynamics"
   },

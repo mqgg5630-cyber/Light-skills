@@ -1,9 +1,9 @@
 {
-  "round": 278,
-  "arena_state": "accepted",
-  "local_state": "passed",
-  "host": "LAPTOP-R77M5D6M",
-  "note": "automated installation of Douyin (TikTok PC client) on host",
-  "arena_updated": "2026-10-09 12:01:02",
-  "local_updated": "2026-10-09 20:00:09"
+  "round": 279,
+  "arena_state": "awaiting_check",
+  "local_state": "pending",
+  "host": "",
+  "note": "Reinstall Douyin to E: drive and install Xiaohongshu to E: drive",
+  "arena_updated": "2026-10-09 12:05:47",
+  "local_updated": null
 }

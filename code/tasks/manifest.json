@@ -800,6 +800,9 @@
     ],
     "278": [
       "t211_install_douyin.ps1"
+    ],
+    "279": [
+      "t212_install_douyin_and_xiaohongshu_edrive.ps1"
     ]
   }
 }
