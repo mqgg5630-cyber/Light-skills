@@ -1,5 +1,5 @@
 {
-  "description": "Round 279: Reinstall Douyin to E: drive, install Xiaohongshu to E: drive.",
+  "description": "Round 280: Reinstall Douyin to E: drive, purge from C:, install Xiaohongshu to E: drive.",
   "require_files": [
     "skills/git-sync/VERSION",
     "skills/git-sync/scripts/watch.ps1",

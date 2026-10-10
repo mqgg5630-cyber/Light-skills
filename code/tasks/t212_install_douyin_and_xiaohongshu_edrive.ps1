@@ -32,7 +32,10 @@ if (-not (Test-Path -LiteralPath $ePrograms)) {
 # =========================================================================
 Write-Output "=== DOUYIN: MIGRATING TO E: DRIVE ==="
 # Stop any running douyin process
-Get-Process -Name "douyin" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
+Get-Process | Where-Object { $_.ProcessName -match "douyin|bytedance|crashpad" } | Stop-Process -Force -ErrorAction SilentlyContinue
+& taskkill.exe /F /IM "douyin*" /T 2>$null
+& taskkill.exe /F /IM "Douyin*" /T 2>$null
+& taskkill.exe /F /IM "crashpad_handler*" /T 2>$null
 Start-Sleep -Seconds 2
 
 $douyinEDir = Join-Path $ePrograms "Douyin"
@@ -90,16 +93,42 @@ Write-Output "DOUYIN_ON_E_EXISTS=$douyinOnEOk ($douyinEExe)"
 
 # Clean up C: drive completely
 if ($douyinOnEOk) {
+    & taskkill.exe /F /IM "douyin*" /T 2>$null
+    & taskkill.exe /F /IM "ByteDance*" /T 2>$null
+    & taskkill.exe /F /IM "crashpad_handler*" /T 2>$null
+    Start-Sleep -Seconds 1
+
     foreach ($cp in $douyinCPaths) {
         if (Test-Path -LiteralPath $cp) {
             Write-Output "REMOVING_FROM_C: $cp"
-            Remove-Item -LiteralPath $cp -Recurse -Force -ErrorAction SilentlyContinue
+            & cmd.exe /c "attrib -r -s -h `"$cp\*`" /s /d" 2>$null
+            & cmd.exe /c "rd /s /q `"$cp`"" 2>$null
+            
+            # If folder or douyin.exe still exists, force move/delete
+            if (Test-Path -LiteralPath $cp) {
+                Get-ChildItem -LiteralPath $cp -Recurse -Force -ErrorAction SilentlyContinue |
+                    Sort-Object -Property { $_.FullName.Length } -Descending |
+                    ForEach-Object {
+                        try { Remove-Item -LiteralPath $_.FullName -Force -ErrorAction SilentlyContinue } catch {}
+                    }
+                try { Remove-Item -LiteralPath $cp -Recurse -Force -ErrorAction SilentlyContinue } catch {}
+            }
+
+            $cExe = Join-Path $cp "douyin.exe"
+            if (Test-Path -LiteralPath $cExe) {
+                try {
+                    $tmpTrash = Join-Path $env:TEMP "douyin_c_trash_$PID.exe"
+                    Move-Item -LiteralPath $cExe -Destination $tmpTrash -Force -ErrorAction SilentlyContinue
+                    Remove-Item -LiteralPath $tmpTrash -Force -ErrorAction SilentlyContinue
+                } catch {}
+            }
         }
     }
+    
     # Check parent ByteDance folder if empty
     $bdFolder = "C:\Program Files (x86)\ByteDance"
-    if ((Test-Path -LiteralPath $bdFolder) -and ((Get-ChildItem -LiteralPath $bdFolder -ErrorAction SilentlyContinue).Count -eq 0)) {
-        Remove-Item -LiteralPath $bdFolder -Force -ErrorAction SilentlyContinue
+    if (Test-Path -LiteralPath $bdFolder) {
+        & cmd.exe /c "rd /s /q `"$bdFolder`"" 2>$null
     }
     
     # Update registry paths to E: drive
@@ -192,17 +221,18 @@ if (-not (Test-Path -LiteralPath $xhsIco)) {
 }
 
 # Compile native GUI launcher Xiaohongshu.exe in E:\Programs\Xiaohongshu
-$cscPaths = @(
-    "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe",
-    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe"
-)
-$cscExe = $null
-foreach ($cp in $cscPaths) {
-    if (Test-Path -LiteralPath $cp) { $cscExe = $cp; break }
-}
+if (-not (Test-Path -LiteralPath $xhsExe)) {
+    $cscPaths = @(
+        "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe",
+        "C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe"
+    )
+    $cscExe = $null
+    foreach ($cp in $cscPaths) {
+        if (Test-Path -LiteralPath $cp) { $cscExe = $cp; break }
+    }
 
-$csharpSrc = Join-Path $xhsEDir "Launcher.cs"
-$csCode = @'
+    $csharpSrc = Join-Path $xhsEDir "Launcher.cs"
+    $csCode = @'
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -230,15 +260,16 @@ public class XiaohongshuApp {
     }
 }
 '@
-Set-Content -LiteralPath $csharpSrc -Value $csCode -Encoding UTF8
+    Set-Content -LiteralPath $csharpSrc -Value $csCode -Encoding UTF8
 
-if ($cscExe -and (Test-Path -LiteralPath $cscExe)) {
-    Write-Output "COMPILING_XHS_EXE_WITH_CSC: $cscExe"
-    $icoArg = if (Test-Path -LiteralPath $xhsIco) { "/win32icon:`"$xhsIco`"" } else { "" }
-    $compArgs = @("/target:winexe", "/out:`"$xhsExe`"", "`"$csharpSrc`"")
-    if ($icoArg) { $compArgs += $icoArg }
-    $compProc = Start-Process -FilePath $cscExe -ArgumentList ($compArgs -join ' ') -PassThru -Wait -NoNewWindow
-    Write-Output "CSC_EXIT_CODE=$($compProc.ExitCode)"
+    if ($cscExe -and (Test-Path -LiteralPath $cscExe)) {
+        Write-Output "COMPILING_XHS_EXE_WITH_CSC: $cscExe"
+        $icoArg = if (Test-Path -LiteralPath $xhsIco) { "/win32icon:`"$xhsIco`"" } else { "" }
+        $compArgs = @("/target:winexe", "/out:`"$xhsExe`"", "`"$csharpSrc`"")
+        if ($icoArg) { $compArgs += $icoArg }
+        $compProc = Start-Process -FilePath $cscExe -ArgumentList ($compArgs -join ' ') -PassThru -Wait -NoNewWindow
+        Write-Output "CSC_EXIT_CODE=$($compProc.ExitCode)"
+    }
 }
 
 # Fallback .bat launcher if exe not created
@@ -285,10 +316,10 @@ $allOk = $douyinOk -and $douyinNotOnC -and $xhsOk
 
 $statusDir = Join-Path $repo "results\status"
 New-Item -ItemType Directory -Force -Path $statusDir | Out-Null
-$reportFile = Join-Path $statusDir "round279_install_edrive_report.md"
+$reportFile = Join-Path $statusDir "round280_install_edrive_report.md"
 
 $lines = @(
-    "# Round 279 Report: Douyin and Xiaohongshu on E: Drive",
+    "# Round 280 Report: Douyin and Xiaohongshu on E: Drive",
     "",
     "- Host: $env:COMPUTERNAME",
     "- Date: " + (Get-Date).ToString("yyyy-MM-dd HH:mm:ss"),

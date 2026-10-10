@@ -1,9 +1,9 @@
 {
-    "round":  279,
-    "arena_state":  "awaiting_check",
-    "local_state":  "failed",
-    "host":  "LAPTOP-R77M5D6M",
-    "note":  "Reinstall Douyin to E: drive and install Xiaohongshu to E: drive",
-    "arena_updated":  "2026-10-09 12:05:47",
-    "local_updated":  "2026-10-10 10:02:14"
+  "round": 280,
+  "arena_state": "awaiting_check",
+  "local_state": "pending",
+  "host": "",
+  "note": "Reinstall Douyin to E: drive, purge from C:, install Xiaohongshu to E: drive",
+  "arena_updated": "2026-10-10 02:04:24",
+  "local_updated": null
 }
