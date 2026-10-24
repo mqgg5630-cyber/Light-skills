@@ -1,0 +1,61 @@
+check round 1 on LAPTOP-R77M5D6M - failed (exit 1)
+cmd: powershell -NoProfile -ExecutionPolicy Bypass -File code/local_check.ps1
+elapsed: 17s
+
+OK: all .ps1 files are ASCII-only
+OK: sync.config.json branch=arena/01a0c342-light-skills
+OK: sync.config.json branch matches HEAD (arena/01a0c342-light-skills)
+OK: root scripts identical to skills/git-sync/scripts
+OK: no drive-style variable typos ($var:)
+== exits in Invoke-PollRound: 6
+OK: every exit path sets its closing summary
+== exits in Invoke-PollOnce: 2 (lock held / crashed / normal)
+OK: loop closing lines covered (6 exit paths, all with their own summary)
+OK: every .ps1 parses
+   (gate ran via E:\hermes\git\bin\bash.exe [git])
+== accept 2a: silent push PROVEN (ls-remote + push --dry-run, prompts disabled)
+== auth: no per-clone account pin (the machine default account is used)
+   a push answering 403 "Permission to ... denied to OTHER-USER": .\auth.ps1 -Accounts
+[FAIL] accept 2b: scheduled task 'git-sync-watch-Light-skills-01a0c342-light-skills' not found - run .\watch.ps1 -Register
+== exits in Invoke-PollRound: 6
+OK: every exit path sets its closing summary
+== exits in Invoke-PollOnce: 2 (lock held / crashed / normal)
+OK: loop closing lines covered (6 exit paths, all with their own summary)
+== check_loop_summary PASSED
+== accept 2c: watcher closing lines verified (every exit path has its summary)
+== accept 2d: hands-free auto_pull/auto_push present in watch.ps1
+== success criteria: results/status/success_criteria.json
+   Round 1 = BrowserSkill bridge install verified ON THE LOCAL WINDOWS CLONE (E:/0zhongqi).
+   OK   exists: watch.ps1 (85793 B)
+   OK   exists: sync.ps1 (8661 B)
+   OK   exists: push.ps1 (14712 B)
+   OK   exists: doctor.ps1 (16008 B)
+   OK   exists: auth.ps1 (49023 B)
+   OK   exists: bootstrap.ps1 (5908 B)
+   OK   exists: download.ps1 (7523 B)
+   OK   exists: where.ps1 (2941 B)
+   OK   exists: where.cmd (259 B)
+   OK   exists: skills/git-sync/VERSION (7 B)
+   OK   exists: skills/git-sync/SKILL.md (32652 B)
+   OK   exists: skills/git-sync/sync.config.json (1258 B)
+   OK   exists: skills/git-sync/scripts/watch.ps1 (85793 B)
+   OK   exists: skills/arena-local-bridge/SKILL.md (10719 B)
+   OK   exists: skills/.external-skills (897 B)
+   OK   exists: skills/gen_skills_index.sh (3027 B)
+   OK   exists: code/check_all.sh (10173 B)
+   OK   exists: code/local_check.ps1 (15115 B)
+   OK   exists: code/scan_ps_var_colon.py (1596 B)
+   OK   exists: SKILLS.md (10738 B)
+   FAIL MISSING file: docs/local-bridge/README.md
+   FAIL MISSING file: scripts/bootstrap_agent_skills.py
+   OK   absent: 01a0a821.md
+   OK   contains skills/git-sync/VERSION <- 2.9.2
+   OK   contains skills/git-sync/sync.config.json <- arena/01a0c342-light-skills
+   OK   contains skills/.external-skills <- arena-local-bridge
+   FAIL MISSING for contains: docs/local-bridge/README.md
+   OK   contains SKILLS.md <- BEGIN:AUTO-INDEX
+   FAIL MISSING for contains: scripts/bootstrap_agent_skills.py
+   OK   size watch.ps1: 85793 >= 20000
+   OK   size skills/git-sync/SKILL.md: 32652 >= 5000
+   FAIL MISSING for min_bytes: docs/local-bridge/README.md
+   OK   size SKILLS.md: 10738 >= 2000
