@@ -1,0 +1,20 @@
+﻿{
+    "status":  "synced",
+    "host":  "LAPTOP-R77M5D6M",
+    "repo":  "Light-skills",
+    "branch":  "arena/ae80330d-light-skills",
+    "source_commit":  "880bab498b1ee698fd8c82977601a74acbc9b70d",
+    "synced_at_utc":  "2026-10-24T07:15:34Z",
+    "synced_at_local":  "2026-10-24 15:15:34",
+    "poll_interval_sec":  15,
+    "local_results_dir":  "E:\\0github\\results\\Light-skills-ae80330d-light-skills",
+    "synced_files_count":  41,
+    "tasks_executed_count":  0,
+    "tasks_executed":  [
+
+                       ],
+    "copied_targets":  [
+
+                       ],
+    "mode":  "auto-poll-exec-and-sync-zero-window-v4.0"
+}
